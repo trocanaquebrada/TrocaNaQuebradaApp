@@ -48,7 +48,7 @@ const Section = styled(View)`
   justify-content: flex-end;
 `;
 
-const Avaiable = styled(SvgXml)`
+const Available = styled(SvgXml)`
   flex-direction: row;
 `;*/
 
@@ -78,7 +78,7 @@ export const ProductInfoCard = ({ product = {} }) => {
             ))}
           </Rating>
           {/*<SectionEnd>
-            {isAvailable && <Avaiable xml={available} width={20} height={20} />}
+            {isAvailable && <Available xml={available} width={20} height={20} />}
             </SectionEnd>*/}
         </Section>
         <Address>{address}</Address>

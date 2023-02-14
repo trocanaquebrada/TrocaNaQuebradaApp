@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "NaQuebrada",
-    "slug": "NaQuebrada",
+    "slug": "trocanaquebrada",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,6 +28,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f1f539d4-3297-45cd-9100-367ae5e79849"
+      }
+    },
+    "owner": "cristhine"
   }
 }

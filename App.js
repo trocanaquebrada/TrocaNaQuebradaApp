@@ -2,6 +2,7 @@ import React from "react";
 import { Text } from "react-native";
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import { ProductsScreen } from "./src/features/products/screens/products.screen";
+import { ServicesScreen } from "./src/features/services/screens/services.screen"
 import { ThemeProvider } from "styled-components";
 import { theme } from "./src/infrastructure/theme";
 import { NavigationContainer } from "@react-navigation/native";
@@ -19,6 +20,7 @@ const Tab = createBottomTabNavigator();
 
 const TAB_ICON = {
   Produtos: "md-list-sharp",
+  Servicos: "list-circle",
   Mapa: "md-map",
   Configuracoes: "md-settings",
 };
@@ -68,6 +70,7 @@ export default function App() {
             }}
           >
             <Tab.Screen name="Produtos" component={ProductsScreen} />
+            <Tab.Screen name="Servicos" component={ServicesScreen} />
             <Tab.Screen name="Mapa" component={Map} />
             <Tab.Screen name="Configuracoes" component={Settings} />
           </Tab.Navigator>

@@ -1,13 +1,13 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
-import { Text } from "react-native";
-
-import { SafeArea } from "../../components/utility/safe-area.component";
 
 import { ProductsNavigator } from "./products.navigator";
 import { MapScreen } from "../../features/map/screens/map.screen";
+import { ProfileNavigator } from "./profile.navigator";
+
+import { ProductsContextProvider } from "../../resources/products/products.context";
+import { LocationContextProvider } from "../../resources/location/location.context";
 
 const Tab = createBottomTabNavigator();
 
@@ -17,12 +17,6 @@ const TAB_ICON = {
   Mapa: "md-map",
   Configuracoes: "md-settings",
 };
-
-const Settings = () => (
-  <SafeArea>
-    <Text>Settings</Text>
-  </SafeArea>
-);
 
 const createScreenOptions = ({ route }) => {
   const iconName = TAB_ICON[route.name];
@@ -34,19 +28,21 @@ const createScreenOptions = ({ route }) => {
 };
 
 export const AppNavigator = () => (
-  <NavigationContainer>
-    <Tab.Navigator
-      screenOptions={
-        ({ createScreenOptions },
-        {
-          tabBarActiveTintColor: "purple",
-          tabBarInactiveTintColor: "gray",
-        })
-      }
-    >
-      <Tab.Screen name="Produtos" component={ProductsNavigator} />
-      <Tab.Screen name="Localizacao" component={MapScreen} />
-      <Tab.Screen name="Configuracoes" component={Settings} />
-    </Tab.Navigator>
-  </NavigationContainer>
+  <LocationContextProvider>
+    <ProductsContextProvider>
+      <Tab.Navigator
+        screenOptions={
+          ({ createScreenOptions },
+          {
+            tabBarActiveTintColor: "purple",
+            tabBarInactiveTintColor: "gray",
+          })
+        }
+      >
+        <Tab.Screen name="Produtos" component={ProductsNavigator} />
+        <Tab.Screen name="Localizacao" component={MapScreen} />
+        <Tab.Screen name="Perfil" component={ProfileNavigator} />
+      </Tab.Navigator>
+    </ProductsContextProvider>
+  </LocationContextProvider>
 );

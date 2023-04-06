@@ -8,7 +8,11 @@ const ProductStack = createStackNavigator();
 
 export const ProductsNavigator = () => {
   return (
-    <ProductStack.Navigator headerMode="none">
+    <ProductStack.Navigator
+      screenOptions={{
+        headerMode: "none",
+      }}
+    >
       <ProductStack.Screen name="Produtos" component={ProductsScreen} />
     </ProductStack.Navigator>
   );

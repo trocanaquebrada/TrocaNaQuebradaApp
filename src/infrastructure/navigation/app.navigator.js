@@ -13,9 +13,8 @@ const Tab = createBottomTabNavigator();
 
 const TAB_ICON = {
   Produtos: "md-list-sharp",
-  Servicos: "list-circle",
-  Mapa: "md-map",
-  Configuracoes: "md-settings",
+  Localizacao: "md-map",
+  Perfil: "md-settings",
 };
 
 const createScreenOptions = ({ route }) => {

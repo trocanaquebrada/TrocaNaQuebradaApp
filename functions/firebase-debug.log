@@ -1,46 +1,45 @@
-[debug] [2023-04-08T01:09:43.979Z] ----------------------------------------------------------------------
-[debug] [2023-04-08T01:09:43.981Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Cris\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
-[debug] [2023-04-08T01:09:43.982Z] CLI Version:   11.25.3
-[debug] [2023-04-08T01:09:43.982Z] Platform:      win32
-[debug] [2023-04-08T01:09:43.982Z] Node Version:  v16.15.0
-[debug] [2023-04-08T01:09:43.983Z] Time:          Fri Apr 07 2023 22:09:43 GMT-0300 (Brasilia Standard Time)
-[debug] [2023-04-08T01:09:43.984Z] ----------------------------------------------------------------------
+[debug] [2023-04-17T18:45:38.053Z] ----------------------------------------------------------------------
+[debug] [2023-04-17T18:45:38.056Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Cris\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2023-04-17T18:45:38.057Z] CLI Version:   11.25.3
+[debug] [2023-04-17T18:45:38.057Z] Platform:      win32
+[debug] [2023-04-17T18:45:38.057Z] Node Version:  v16.15.0
+[debug] [2023-04-17T18:45:38.060Z] Time:          Mon Apr 17 2023 15:45:38 GMT-0300 (Brasilia Standard Time)
+[debug] [2023-04-17T18:45:38.061Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-04-08T01:09:44.102Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-04-08T01:09:44.103Z] > authorizing via signed-in user (trocanaquebrada@gmail.com)
+[debug] [2023-04-17T18:45:38.068Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-04-17T18:45:38.270Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-17T18:45:38.270Z] > authorizing via signed-in user (trocanaquebrada@gmail.com)
 [info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
-[debug] [2023-04-08T01:09:44.121Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-04-08T01:09:44.121Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[debug] [2023-04-08T01:09:44.134Z] [hub] writing locator at C:\Users\Cris\AppData\Local\Temp\hub-trocanaquebrada-f3b2b.json
-[debug] [2023-04-08T01:09:44.234Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-04-08T01:09:44.236Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-04-08T01:09:44.236Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[debug] [2023-04-17T18:45:38.286Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-04-17T18:45:38.286Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-04-17T18:45:38.299Z] [hub] writing locator at C:\Users\Cris\AppData\Local\Temp\hub-trocanaquebrada-f3b2b.json
+[debug] [2023-04-17T18:45:38.414Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-04-17T18:45:38.414Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-04-17T18:45:38.414Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
 [warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
-[debug] [2023-04-08T01:09:44.247Z] defaultcredentials: writing to file C:\Users\Cris\AppData\Roaming\firebase\trocanaquebrada_gmail_com_application_default_credentials.json
-[debug] [2023-04-08T01:09:44.256Z] Setting GAC to C:\Users\Cris\AppData\Roaming\firebase\trocanaquebrada_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Cris\\AppData\\Roaming\\firebase\\trocanaquebrada_gmail_com_application_default_credentials.json"}}
-[debug] [2023-04-08T01:09:44.258Z] > refreshing access token with scopes: []
-[debug] [2023-04-08T01:09:44.262Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2023-04-08T01:09:44.264Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-04-08T01:09:44.465Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2023-04-08T01:09:44.466Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-04-08T01:09:44.481Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/trocanaquebrada-f3b2b/adminSdkConfig [none]
-[debug] [2023-04-08T01:09:44.879Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/trocanaquebrada-f3b2b/adminSdkConfig 200
-[debug] [2023-04-08T01:09:44.879Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/trocanaquebrada-f3b2b/adminSdkConfig {"projectId":"trocanaquebrada-f3b2b","storageBucket":"trocanaquebrada-f3b2b.appspot.com"}
-[info] i  ui: downloading ui-v1.11.5.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.11.5.zip..."}}
-[debug] [2023-04-08T01:09:44.925Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.5.zip 
-[debug] [2023-04-08T01:09:45.161Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.5.zip 200
-[debug] [2023-04-08T01:09:45.162Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.5.zip [stream]
-[debug] [2023-04-08T01:09:48.225Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-04-08T01:09:48.226Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-04-08T01:09:48.226Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Cris\\.cache\\firebase\\emulators\\ui-v1.11.5\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Cris\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.5\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[debug] [2023-04-17T18:45:38.421Z] defaultcredentials: writing to file C:\Users\Cris\AppData\Roaming\firebase\trocanaquebrada_gmail_com_application_default_credentials.json
+[debug] [2023-04-17T18:45:38.432Z] Setting GAC to C:\Users\Cris\AppData\Roaming\firebase\trocanaquebrada_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Cris\\AppData\\Roaming\\firebase\\trocanaquebrada_gmail_com_application_default_credentials.json"}}
+[debug] [2023-04-17T18:45:38.435Z] > refreshing access token with scopes: []
+[debug] [2023-04-17T18:45:38.437Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-04-17T18:45:38.437Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-04-17T18:45:38.646Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-04-17T18:45:38.646Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-04-17T18:45:38.660Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/trocanaquebrada-f3b2b/adminSdkConfig [none]
+[debug] [2023-04-17T18:45:38.695Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-04-17T18:45:38.695Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-04-17T18:45:39.070Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/trocanaquebrada-f3b2b/adminSdkConfig 200
+[debug] [2023-04-17T18:45:39.071Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/trocanaquebrada-f3b2b/adminSdkConfig {"projectId":"trocanaquebrada-f3b2b","storageBucket":"trocanaquebrada-f3b2b.appspot.com"}
+[debug] [2023-04-17T18:45:39.119Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-04-17T18:45:39.119Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-04-17T18:45:39.119Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Cris\\.cache\\firebase\\emulators\\ui-v1.11.5\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Cris\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.5\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
 [info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2023-04-08T01:09:48.488Z] Web / API server started at 127.0.0.1:4000
+[debug] [2023-04-17T18:45:39.414Z] Web / API server started at 127.0.0.1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
-[debug] [2023-04-08T01:09:48.489Z] Web / API server started at ::1:4000
+[debug] [2023-04-17T18:45:39.415Z] Web / API server started at ::1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
 [info] i  functions: Watching "C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\" for Cloud Functions..."}}
-[debug] [2023-04-08T01:09:48.502Z] Validating nodejs source
-[debug] [2023-04-08T01:09:51.703Z] > [functions] package.json contents: {
+[debug] [2023-04-17T18:45:39.687Z] Validating nodejs source
+[debug] [2023-04-17T18:45:42.225Z] > [functions] package.json contents: {
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
@@ -56,24 +55,26 @@
   "main": "index.js",
   "dependencies": {
     "firebase-admin": "^11.5.0",
-    "firebase-functions": "^4.2.0"
+    "firebase-functions": "^4.3.0"
   },
   "devDependencies": {
     "firebase-functions-test": "^3.0.0"
   },
   "private": true
 }
-[debug] [2023-04-08T01:09:51.703Z] Building nodejs source
-[debug] [2023-04-08T01:09:51.704Z] Failed to find version of module node: reached end of search path C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules
+[debug] [2023-04-17T18:45:42.225Z] Building nodejs source
+[debug] [2023-04-17T18:45:42.226Z] Failed to find version of module node: reached end of search path C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules
 [info] +  functions: Using node@16 from host. 
-[debug] [2023-04-08T01:09:51.706Z] Could not find functions.yaml. Must use http discovery
-[debug] [2023-04-08T01:09:51.716Z] Found firebase-functions binary at 'C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules\.bin\firebase-functions'
-[debug] [2023-04-08T01:09:52.430Z] Serving at port 8013
+[debug] [2023-04-17T18:45:42.229Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-17T18:45:42.241Z] Found firebase-functions binary at 'C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-04-17T18:45:42.891Z] Serving at port 8618
 
-[debug] [2023-04-08T01:09:52.901Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
-[debug] [2023-04-08T01:09:52.909Z] shutdown requested via /__/quitquitquit
+[debug] [2023-04-17T18:45:43.452Z] Got response from /__/functions.yaml {"endpoints":{"geocode":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"geocode"},"placesNearby":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"placesNearby"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-17T18:45:43.461Z] shutdown requested via /__/quitquitquit
 
-[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[info] +  functions: Loaded functions definitions from source: geocode, placesNearby. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: geocode, placesNearby."}}
+[info] +  functions[us-central1-geocode]: http function initialized (http://127.0.0.1:5001/trocanaquebrada-f3b2b/us-central1/geocode). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/trocanaquebrada-f3b2b/us-central1/geocode)."}}
+[info] +  functions[us-central1-placesNearby]: http function initialized (http://127.0.0.1:5001/trocanaquebrada-f3b2b/us-central1/placesNearby). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/trocanaquebrada-f3b2b/us-central1/placesNearby)."}}
 [info] 
 ┌─────────────────────────────────────────────────────────────┐
 │ ✔  All emulators ready! It is now safe to connect your app. │
@@ -90,217 +91,400 @@
 
 Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
  
-[debug] [2023-04-08T01:12:45.933Z] File C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\index.js changed, reloading triggers"}}
-[debug] [2023-04-08T01:12:46.961Z] Validating nodejs source
-[debug] [2023-04-08T01:12:50.371Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "16"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "firebase-admin": "^11.5.0",
-    "firebase-functions": "^4.2.0"
-  },
-  "devDependencies": {
-    "firebase-functions-test": "^3.0.0"
-  },
-  "private": true
-}
-[debug] [2023-04-08T01:12:50.371Z] Building nodejs source
-[debug] [2023-04-08T01:12:50.372Z] Failed to find version of module node: reached end of search path C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules
-[info] +  functions: Using node@16 from host. 
-[debug] [2023-04-08T01:12:50.374Z] Could not find functions.yaml. Must use http discovery
-[debug] [2023-04-08T01:12:50.388Z] Found firebase-functions binary at 'C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules\.bin\firebase-functions'
-[debug] [2023-04-08T01:12:50.400Z] File C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\index.js changed, reloading triggers"}}
-[debug] [2023-04-08T01:12:50.932Z] Serving at port 8071
-
-[debug] [2023-04-08T01:12:50.956Z] Got response from /__/functions.yaml Failed to generate manifest from function source: SyntaxError: Unexpected end of input
-[debug] [2023-04-08T01:12:50.960Z] Failed to parse functions.yamlincomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 62:
-     ... rom function source: SyntaxError: Unexpected end of input
-                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: SyntaxError: Unexpected end of input\n\u0000","position":61,"line":0,"column":61},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 62:\n     ... rom function source: SyntaxError: Unexpected end of input\n                                         ^"}
-[debug] [2023-04-08T01:12:50.966Z] shutdown requested via /__/quitquitquit
-
-[error] !!  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: SyntaxError: Unexpected end of input {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: SyntaxError: Unexpected end of input"}}
-[debug] [2023-04-08T01:12:51.147Z] File C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\index.js changed, reloading triggers"}}
-[debug] [2023-04-08T01:12:52.150Z] Validating nodejs source
-[debug] [2023-04-08T01:12:54.728Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "16"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "firebase-admin": "^11.5.0",
-    "firebase-functions": "^4.2.0"
-  },
-  "devDependencies": {
-    "firebase-functions-test": "^3.0.0"
-  },
-  "private": true
-}
-[debug] [2023-04-08T01:12:54.728Z] Building nodejs source
-[debug] [2023-04-08T01:12:54.728Z] Failed to find version of module node: reached end of search path C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules
-[info] +  functions: Using node@16 from host. 
-[debug] [2023-04-08T01:12:54.730Z] Could not find functions.yaml. Must use http discovery
-[debug] [2023-04-08T01:12:54.739Z] Found firebase-functions binary at 'C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules\.bin\firebase-functions'
-[debug] [2023-04-08T01:12:54.747Z] File C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\index.js changed, reloading triggers"}}
-[debug] [2023-04-08T01:12:55.436Z] Serving at port 8719
-
-[debug] [2023-04-08T01:12:55.479Z] File C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\index.js changed, reloading triggers"}}
-[debug] [2023-04-08T01:12:55.947Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
-[debug] [2023-04-08T01:12:55.954Z] shutdown requested via /__/quitquitquit
-
-[info] +  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
-[info] +  functions[us-central1-helloWorld]: http function initialized (http://127.0.0.1:5001/trocanaquebrada-f3b2b/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/trocanaquebrada-f3b2b/us-central1/helloWorld)."}}
-[debug] [2023-04-08T01:12:56.482Z] Validating nodejs source
-[debug] [2023-04-08T01:12:59.154Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "16"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "firebase-admin": "^11.5.0",
-    "firebase-functions": "^4.2.0"
-  },
-  "devDependencies": {
-    "firebase-functions-test": "^3.0.0"
-  },
-  "private": true
-}
-[debug] [2023-04-08T01:12:59.155Z] Building nodejs source
-[debug] [2023-04-08T01:12:59.155Z] Failed to find version of module node: reached end of search path C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules
-[info] +  functions: Using node@16 from host. 
-[debug] [2023-04-08T01:12:59.157Z] Could not find functions.yaml. Must use http discovery
-[debug] [2023-04-08T01:12:59.170Z] Found firebase-functions binary at 'C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules\.bin\firebase-functions'
-[debug] [2023-04-08T01:12:59.193Z] File C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\index.js changed, reloading triggers"}}
-[debug] [2023-04-08T01:12:59.907Z] Serving at port 8947
-
-[debug] [2023-04-08T01:13:00.194Z] Validating nodejs source
-[debug] [2023-04-08T01:13:03.455Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "16"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "firebase-admin": "^11.5.0",
-    "firebase-functions": "^4.2.0"
-  },
-  "devDependencies": {
-    "firebase-functions-test": "^3.0.0"
-  },
-  "private": true
-}
-[debug] [2023-04-08T01:13:03.455Z] Building nodejs source
-[debug] [2023-04-08T01:13:03.455Z] Failed to find version of module node: reached end of search path C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules
-[info] +  functions: Using node@16 from host. 
-[debug] [2023-04-08T01:13:03.458Z] Could not find functions.yaml. Must use http discovery
-[debug] [2023-04-08T01:13:03.470Z] Found firebase-functions binary at 'C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules\.bin\firebase-functions'
-[debug] [2023-04-08T01:13:03.520Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
-[debug] [2023-04-08T01:13:03.547Z] shutdown requested via /__/quitquitquit
-
-[info] +  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
-[debug] [2023-04-08T01:13:04.333Z] Serving at port 8598
-
-[debug] [2023-04-08T01:13:04.796Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
-[debug] [2023-04-08T01:13:04.805Z] shutdown requested via /__/quitquitquit
-
-[info] +  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
-[debug] [2023-04-08T01:13:46.826Z] File C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\index.js changed, reloading triggers"}}
-[debug] [2023-04-08T01:13:47.828Z] Validating nodejs source
-[debug] [2023-04-08T01:13:50.424Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "16"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "firebase-admin": "^11.5.0",
-    "firebase-functions": "^4.2.0"
-  },
-  "devDependencies": {
-    "firebase-functions-test": "^3.0.0"
-  },
-  "private": true
-}
-[debug] [2023-04-08T01:13:50.424Z] Building nodejs source
-[debug] [2023-04-08T01:13:50.424Z] Failed to find version of module node: reached end of search path C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules
-[info] +  functions: Using node@16 from host. 
-[debug] [2023-04-08T01:13:50.425Z] Could not find functions.yaml. Must use http discovery
-[debug] [2023-04-08T01:13:50.436Z] Found firebase-functions binary at 'C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\functions\node_modules\.bin\firebase-functions'
-[debug] [2023-04-08T01:13:50.921Z] Serving at port 8140
-
-[debug] [2023-04-08T01:13:51.468Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
-[debug] [2023-04-08T01:13:51.477Z] shutdown requested via /__/quitquitquit
-
-[info] +  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
-[debug] [2023-04-08T01:14:43.161Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/helloWorld-2023-04-08T01:14:43.161Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
-[debug] [2023-04-08T01:14:43.162Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/helloWorld-2023-04-08T01:14:43.161Z"],"workRunningCount":1}
-[debug] [2023-04-08T01:14:43.163Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/helloWorld --> us-central1-helloWorld
-[debug] [2023-04-08T01:14:43.176Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
-[debug] [2023-04-08T01:14:43.176Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/helloWorld, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/helloWorld, mapping to path=/"}}
-[debug] [2023-04-08T01:14:43.185Z] [worker-pool] addWorker(us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloWorld)"}}
-[debug] [2023-04-08T01:14:43.185Z] [worker-pool] Adding worker with key us-central1-helloWorld, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloWorld, total=1"}}
-[debug] [2023-04-08T01:14:45.068Z] [runtime-status] [17124] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.6.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [17124] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
-[debug] [2023-04-08T01:14:45.070Z] [runtime-status] [17124] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.2.1","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [17124] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.2.1\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
-[debug] [2023-04-08T01:14:45.071Z] [runtime-status] [17124] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [17124] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
-[debug] [2023-04-08T01:14:45.072Z] [runtime-status] [17124] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.2.1","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [17124] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.2.1\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
-[debug] [2023-04-08T01:14:45.458Z] [runtime-status] [17124] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [17124] Checked functions.config() {\"config\":{}}"}}
-[debug] [2023-04-08T01:14:45.458Z] [runtime-status] [17124] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.2.1","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [17124] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.2.1\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
-[debug] [2023-04-08T01:14:45.459Z] [runtime-status] [17124] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.2.1","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [17124] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.2.1\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
-[debug] [2023-04-08T01:14:45.461Z] [runtime-status] [17124] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.6.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [17124] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
-[debug] [2023-04-08T01:14:45.472Z] [runtime-status] [17124] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.2.1","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [17124] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.2.1\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
-[debug] [2023-04-08T01:14:45.472Z] [runtime-status] [17124] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.6.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [17124] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
-[debug] [2023-04-08T01:14:45.481Z] [runtime-status] [17124] Functions runtime initialized. {"cwd":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions","node_version":"16.15.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [17124] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\",\"node_version\":\"16.15.0\"}"}}
-[debug] [2023-04-08T01:14:45.481Z] [runtime-status] [17124] Listening to port: \\?\pipe\fire_emu_ddb0348452cd1dee {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [17124] Listening to port: \\\\?\\pipe\\fire_emu_ddb0348452cd1dee"}}
-[debug] [2023-04-08T01:14:45.515Z] [worker-us-central1-helloWorld-9a999dda-e855-4b07-9d87-540d1ca12bad]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-9a999dda-e855-4b07-9d87-540d1ca12bad]: IDLE"}}
-[debug] [2023-04-08T01:14:45.515Z] [worker-pool] submitRequest(triggerId=us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloWorld)"}}
-[info] i  functions: Beginning execution of "us-central1-helloWorld" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Beginning execution of \"us-central1-helloWorld\""}}
-[debug] [2023-04-08T01:14:45.517Z] [worker-us-central1-helloWorld-9a999dda-e855-4b07-9d87-540d1ca12bad]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-9a999dda-e855-4b07-9d87-540d1ca12bad]: BUSY"}}
-[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
-[info] i  functions: Finished "us-central1-helloWorld" in 13.4633ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finished \"us-central1-helloWorld\" in 13.4633ms"}}
-[debug] [2023-04-08T01:14:45.534Z] [worker-us-central1-helloWorld-9a999dda-e855-4b07-9d87-540d1ca12bad]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-9a999dda-e855-4b07-9d87-540d1ca12bad]: IDLE"}}
-[debug] [2023-04-08T01:14:45.534Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
-[debug] [2023-04-08T01:14:45.596Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-04-17T18:47:00.260Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:47:00.260Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:47:00.262Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:47:00.260Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:47:00.264Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2023-04-17T18:47:00.275Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:47:00.278Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco"}}
+[debug] [2023-04-17T18:47:00.302Z] [worker-pool] addWorker(us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-geocode)"}}
+[debug] [2023-04-17T18:47:00.303Z] [worker-pool] Adding worker with key us-central1-geocode, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-geocode, total=1"}}
+[debug] [2023-04-17T18:47:02.473Z] [runtime-status] [22096] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.6.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[runtime-status] [22096] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-17T18:47:02.474Z] [runtime-status] [22096] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[runtime-status] [22096] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-04-17T18:47:02.475Z] [runtime-status] [22096] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[runtime-status] [22096] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-04-17T18:47:02.477Z] [runtime-status] [22096] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[runtime-status] [22096] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-04-17T18:47:02.902Z] [runtime-status] [22096] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[runtime-status] [22096] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-04-17T18:47:02.902Z] [runtime-status] [22096] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[runtime-status] [22096] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-04-17T18:47:02.903Z] [runtime-status] [22096] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[runtime-status] [22096] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-04-17T18:47:02.905Z] [runtime-status] [22096] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.6.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[runtime-status] [22096] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-17T18:47:02.914Z] [runtime-status] [22096] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[runtime-status] [22096] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-04-17T18:47:02.915Z] [runtime-status] [22096] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.6.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[runtime-status] [22096] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-17T18:47:02.942Z] [runtime-status] [22096] Functions runtime initialized. {"cwd":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions","node_version":"16.15.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[runtime-status] [22096] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\",\"node_version\":\"16.15.0\"}"}}
+[debug] [2023-04-17T18:47:02.942Z] [runtime-status] [22096] Listening to port: \\?\pipe\fire_emu_30443fb11f63b50f {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[runtime-status] [22096] Listening to port: \\\\?\\pipe\\fire_emu_30443fb11f63b50f"}}
+[debug] [2023-04-17T18:47:03.044Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:47:03.045Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:47:03.048Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 13.6921ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 13.6921ms"}}
+[debug] [2023-04-17T18:47:03.064Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:47:03.065Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:47:17.134Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:47:17.134Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:47:17.135Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:47:17.134Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:47:17.136Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2023-04-17T18:47:17.152Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:47:17.153Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco"}}
+[debug] [2023-04-17T18:47:17.154Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:47:17.160Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 11.4783ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 11.4783ms"}}
+[debug] [2023-04-17T18:47:17.175Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:47:17.175Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:48:44.426Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:48:44.426Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:48:44.426Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:48:44.426Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:48:44.426Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2023-04-17T18:48:44.429Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:48:44.430Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco"}}
+[debug] [2023-04-17T18:48:44.430Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:48:44.431Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 8.1459ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 8.1459ms"}}
+[debug] [2023-04-17T18:48:44.442Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:48:44.442Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:48:48.300Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:48:48.300Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:48:48.301Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:48:48.300Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:48:48.301Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2023-04-17T18:48:48.305Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:48:48.305Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco"}}
+[debug] [2023-04-17T18:48:48.306Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:48:48.307Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 4.5051ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 4.5051ms"}}
+[debug] [2023-04-17T18:48:48.313Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:48:48.313Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:49:03.484Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:49:03.484Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:49:03.486Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:49:03.484Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:49:03.486Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2023-04-17T18:49:03.502Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:49:03.503Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco"}}
+[debug] [2023-04-17T18:49:03.504Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:49:03.508Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 8.4479ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 8.4479ms"}}
+[debug] [2023-04-17T18:49:03.523Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:49:03.524Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:49:11.608Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:49:11.608Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:49:11.609Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:49:11.608Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:49:11.609Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=toronto --> us-central1-geocode
+[debug] [2023-04-17T18:49:11.622Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:49:11.623Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=toronto, mapping to path=/?city=toronto {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=toronto, mapping to path=/?city=toronto"}}
+[debug] [2023-04-17T18:49:11.623Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:49:11.627Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 6.4388ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 6.4388ms"}}
+[debug] [2023-04-17T18:49:11.635Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:49:11.636Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:50:31.358Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:31.358Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:50:31.358Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:31.358Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:50:31.358Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined --> us-central1-placesNearby
+[debug] [2023-04-17T18:50:31.363Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:50:31.363Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined"}}
+[debug] [2023-04-17T18:50:31.379Z] [worker-pool] addWorker(us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-placesNearby)"}}
+[debug] [2023-04-17T18:50:31.380Z] [worker-pool] Adding worker with key us-central1-placesNearby, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-placesNearby, total=1"}}
+[debug] [2023-04-17T18:50:31.386Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:50:31.386Z"],"queueLength":1,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:31.358Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:50:31.387Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:31.358Z","/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:50:31.386Z"],"workRunningCount":2}
+[debug] [2023-04-17T18:50:31.387Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2023-04-17T18:50:31.392Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:50:31.392Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco"}}
+[debug] [2023-04-17T18:50:31.393Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:50:31.395Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 6.6707ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 6.6707ms"}}
+[debug] [2023-04-17T18:50:31.402Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:50:31.403Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:31.358Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:50:32.172Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:32.172Z"],"queueLength":1,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:31.358Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:50:32.173Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:31.358Z","/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:32.172Z"],"workRunningCount":2}
+[debug] [2023-04-17T18:50:32.173Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/placesNearby?location=37.7749295,-122.4194155 --> us-central1-placesNearby
+[debug] [2023-04-17T18:50:32.176Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:50:32.176Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155"}}
+[debug] [2023-04-17T18:50:32.184Z] [worker-pool] addWorker(us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-placesNearby)"}}
+[debug] [2023-04-17T18:50:32.184Z] [worker-pool] Adding worker with key us-central1-placesNearby, total=2 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-placesNearby, total=2"}}
+[debug] [2023-04-17T18:50:33.461Z] [runtime-status] [11956] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.6.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [11956] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-17T18:50:33.464Z] [runtime-status] [11956] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [11956] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-04-17T18:50:33.465Z] [runtime-status] [11956] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [11956] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-04-17T18:50:33.466Z] [runtime-status] [11956] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [11956] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-04-17T18:50:33.891Z] [runtime-status] [11956] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [11956] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-04-17T18:50:33.891Z] [runtime-status] [11956] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [11956] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-04-17T18:50:33.893Z] [runtime-status] [11956] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [11956] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-04-17T18:50:33.895Z] [runtime-status] [11956] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.6.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [11956] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-17T18:50:33.899Z] [runtime-status] [11956] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [11956] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-04-17T18:50:33.899Z] [runtime-status] [11956] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.6.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [11956] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-17T18:50:33.927Z] [runtime-status] [11956] Functions runtime initialized. {"cwd":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions","node_version":"16.15.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [11956] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\",\"node_version\":\"16.15.0\"}"}}
+[debug] [2023-04-17T18:50:33.927Z] [runtime-status] [11956] Listening to port: \\?\pipe\fire_emu_930744b27381af5c {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [11956] Listening to port: \\\\?\\pipe\\fire_emu_930744b27381af5c"}}
+[debug] [2023-04-17T18:50:33.959Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:50:33.959Z] [worker-pool] submitRequest(triggerId=us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-placesNearby)"}}
+[info] i  functions: Beginning execution of "us-central1-placesNearby" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Beginning execution of \"us-central1-placesNearby\""}}
+[debug] [2023-04-17T18:50:33.960Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY"}}
+[info] i  functions: Finished "us-central1-placesNearby" in 10.2487ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Finished \"us-central1-placesNearby\" in 10.2487ms"}}
+[debug] [2023-04-17T18:50:33.972Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:50:33.972Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:32.172Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:50:34.352Z] [runtime-status] [6892] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.6.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [6892] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-17T18:50:34.354Z] [runtime-status] [6892] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [6892] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-04-17T18:50:34.355Z] [runtime-status] [6892] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [6892] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-04-17T18:50:34.357Z] [runtime-status] [6892] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [6892] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-04-17T18:50:34.710Z] [runtime-status] [6892] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [6892] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-04-17T18:50:34.711Z] [runtime-status] [6892] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [6892] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-04-17T18:50:34.711Z] [runtime-status] [6892] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [6892] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-04-17T18:50:34.714Z] [runtime-status] [6892] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.6.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [6892] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-04-17T18:50:34.718Z] [runtime-status] [6892] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.3.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [6892] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.3.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-04-17T18:50:34.718Z] [runtime-status] [6892] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.6.0","resolution":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [6892] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-04-17T18:50:34.740Z] [runtime-status] [6892] Functions runtime initialized. {"cwd":"C:\\Users\\Cris\\Documents\\GitHub\\TrocaNaQuebradaApp\\functions","node_version":"16.15.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [6892] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Cris\\\\Documents\\\\GitHub\\\\TrocaNaQuebradaApp\\\\functions\",\"node_version\":\"16.15.0\"}"}}
+[debug] [2023-04-17T18:50:34.740Z] [runtime-status] [6892] Listening to port: \\?\pipe\fire_emu_8a49c2051c246f6d {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[runtime-status] [6892] Listening to port: \\\\?\\pipe\\fire_emu_8a49c2051c246f6d"}}
+[debug] [2023-04-17T18:50:34.770Z] [worker-us-central1-placesNearby-3e59b137-cade-4d4b-a36e-ef33d98841b7]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-3e59b137-cade-4d4b-a36e-ef33d98841b7]: IDLE"}}
+[debug] [2023-04-17T18:50:34.770Z] [worker-pool] submitRequest(triggerId=us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-placesNearby)"}}
+[info] i  functions: Beginning execution of "us-central1-placesNearby" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Beginning execution of \"us-central1-placesNearby\""}}
+[debug] [2023-04-17T18:50:34.771Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY"}}
+[info] i  functions: Finished "us-central1-placesNearby" in 5.3167ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Finished \"us-central1-placesNearby\" in 5.3167ms"}}
+[debug] [2023-04-17T18:50:34.778Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:50:34.778Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:50:39.843Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:39.843Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:50:39.843Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:39.843Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:50:39.844Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined --> us-central1-placesNearby
+[debug] [2023-04-17T18:50:39.848Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:50:39.849Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined"}}
+[debug] [2023-04-17T18:50:39.849Z] [worker-pool] submitRequest(triggerId=us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-placesNearby)"}}
+[info] i  functions: Beginning execution of "us-central1-placesNearby" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Beginning execution of \"us-central1-placesNearby\""}}
+[debug] [2023-04-17T18:50:39.851Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY"}}
+[debug] [2023-04-17T18:50:39.853Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:50:39.853Z"],"queueLength":1,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:39.843Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:50:39.853Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:50:39.843Z","/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:50:39.853Z"],"workRunningCount":2}
+[debug] [2023-04-17T18:50:39.853Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2023-04-17T18:50:39.858Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:50:39.859Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco"}}
+[debug] [2023-04-17T18:50:39.859Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:50:39.860Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-placesNearby" in 13.317ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Finished \"us-central1-placesNearby\" in 13.317ms"}}
+[debug] [2023-04-17T18:50:39.865Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:50:39.865Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:50:39.853Z"],"workRunningCount":1}
+[info] i  functions: Finished "us-central1-geocode" in 5.8691ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 5.8691ms"}}
+[debug] [2023-04-17T18:50:39.867Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:50:39.868Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:50:47.727Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:50:47.727Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:50:47.728Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:50:47.727Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:50:47.729Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=toronto --> us-central1-geocode
+[debug] [2023-04-17T18:50:47.748Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:50:47.749Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=toronto, mapping to path=/?city=toronto {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=toronto, mapping to path=/?city=toronto"}}
+[debug] [2023-04-17T18:50:47.750Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:50:47.753Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 9.4383ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 9.4383ms"}}
+[debug] [2023-04-17T18:50:47.765Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:50:47.766Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:51:16.060Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:51:16.060Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:51:16.062Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:51:16.060Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:51:16.063Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2023-04-17T18:51:16.076Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:51:16.077Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco"}}
+[debug] [2023-04-17T18:51:16.077Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:51:16.079Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[debug] [2023-04-17T18:51:16.088Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:51:16.088Z"],"queueLength":1,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:51:16.060Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:51:16.089Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:51:16.060Z","/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:51:16.088Z"],"workRunningCount":2}
+[debug] [2023-04-17T18:51:16.089Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined --> us-central1-placesNearby
+[debug] [2023-04-17T18:51:16.100Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:51:16.101Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined"}}
+[debug] [2023-04-17T18:51:16.101Z] [worker-pool] submitRequest(triggerId=us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-placesNearby)"}}
+[info] i  functions: Beginning execution of "us-central1-placesNearby" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Beginning execution of \"us-central1-placesNearby\""}}
+[debug] [2023-04-17T18:51:16.103Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 27.3244ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 27.3244ms"}}
+[debug] [2023-04-17T18:51:16.108Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:51:16.109Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:51:16.088Z"],"workRunningCount":1}
+[info] i  functions: Finished "us-central1-placesNearby" in 8.1021ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Finished \"us-central1-placesNearby\" in 8.1021ms"}}
+[debug] [2023-04-17T18:51:16.114Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:51:16.114Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:51:16.969Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:51:16.969Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:51:16.973Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:51:16.969Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:51:16.973Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/placesNearby?location=37.7749295,-122.4194155 --> us-central1-placesNearby
+[debug] [2023-04-17T18:51:16.980Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:51:16.980Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155"}}
+[debug] [2023-04-17T18:51:16.980Z] [worker-pool] submitRequest(triggerId=us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-placesNearby)"}}
+[info] i  functions: Beginning execution of "us-central1-placesNearby" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Beginning execution of \"us-central1-placesNearby\""}}
+[debug] [2023-04-17T18:51:16.982Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY"}}
+[info] i  functions: Finished "us-central1-placesNearby" in 7.5095ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Finished \"us-central1-placesNearby\" in 7.5095ms"}}
+[debug] [2023-04-17T18:51:16.991Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:51:16.992Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:51:27.673Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:51:27.673Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:51:27.674Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:51:27.673Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:51:27.674Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined --> us-central1-placesNearby
+[debug] [2023-04-17T18:51:27.684Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:51:27.685Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined"}}
+[debug] [2023-04-17T18:51:27.685Z] [worker-pool] submitRequest(triggerId=us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-placesNearby)"}}
+[info] i  functions: Beginning execution of "us-central1-placesNearby" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Beginning execution of \"us-central1-placesNearby\""}}
+[debug] [2023-04-17T18:51:27.688Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY"}}
+[debug] [2023-04-17T18:51:27.695Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:51:27.695Z"],"queueLength":1,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:51:27.673Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:51:27.696Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:51:27.673Z","/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:51:27.695Z"],"workRunningCount":2}
+[debug] [2023-04-17T18:51:27.697Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2023-04-17T18:51:27.709Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:51:27.710Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco"}}
+[debug] [2023-04-17T18:51:27.711Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:51:27.712Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-placesNearby" in 28.7376ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Finished \"us-central1-placesNearby\" in 28.7376ms"}}
+[debug] [2023-04-17T18:51:27.718Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:51:27.719Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:51:27.695Z"],"workRunningCount":1}
+[info] i  functions: Finished "us-central1-geocode" in 9.3203ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 9.3203ms"}}
+[debug] [2023-04-17T18:51:27.723Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:51:27.723Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:52:08.360Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:52:08.360Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:52:08.362Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:52:08.360Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:52:08.362Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=toronto --> us-central1-geocode
+[debug] [2023-04-17T18:52:08.375Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:52:08.376Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=toronto, mapping to path=/?city=toronto {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=toronto, mapping to path=/?city=toronto"}}
+[debug] [2023-04-17T18:52:08.377Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:52:08.381Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 11.2606ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 11.2606ms"}}
+[debug] [2023-04-17T18:52:08.396Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:52:08.396Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:52:09.208Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:52:09.208Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:52:09.209Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:52:09.208Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:52:09.209Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/placesNearby?location=43.653225,-79.383186 --> us-central1-placesNearby
+[debug] [2023-04-17T18:52:09.214Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:52:09.214Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=43.653225,-79.383186, mapping to path=/?location=43.653225,-79.383186 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=43.653225,-79.383186, mapping to path=/?location=43.653225,-79.383186"}}
+[debug] [2023-04-17T18:52:09.214Z] [worker-pool] submitRequest(triggerId=us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-placesNearby)"}}
+[info] i  functions: Beginning execution of "us-central1-placesNearby" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Beginning execution of \"us-central1-placesNearby\""}}
+[debug] [2023-04-17T18:52:09.216Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY"}}
+[info] i  functions: Finished "us-central1-placesNearby" in 4.5981ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Finished \"us-central1-placesNearby\" in 4.5981ms"}}
+[debug] [2023-04-17T18:52:09.222Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:52:09.222Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:52:27.468Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:52:27.467Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:52:27.469Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:52:27.467Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:52:27.470Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2023-04-17T18:52:27.484Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:52:27.486Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco"}}
+[debug] [2023-04-17T18:52:27.487Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:52:27.491Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 13.8173ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 13.8173ms"}}
+[debug] [2023-04-17T18:52:27.507Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:52:27.508Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:52:29.405Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:52:29.405Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:52:29.407Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:52:29.405Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:52:29.407Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/placesNearby?location=37.7749295,-122.4194155 --> us-central1-placesNearby
+[debug] [2023-04-17T18:52:29.423Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:52:29.424Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155"}}
+[debug] [2023-04-17T18:52:29.424Z] [worker-pool] submitRequest(triggerId=us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-placesNearby)"}}
+[info] i  functions: Beginning execution of "us-central1-placesNearby" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Beginning execution of \"us-central1-placesNearby\""}}
+[debug] [2023-04-17T18:52:29.427Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY"}}
+[info] i  functions: Finished "us-central1-placesNearby" in 9.138ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Finished \"us-central1-placesNearby\" in 9.138ms"}}
+[debug] [2023-04-17T18:52:29.441Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:52:29.441Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:55:15.184Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:55:15.183Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:55:15.185Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:55:15.183Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:55:15.185Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined --> us-central1-placesNearby
+[debug] [2023-04-17T18:55:15.201Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:55:15.201Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined"}}
+[debug] [2023-04-17T18:55:15.202Z] [worker-pool] submitRequest(triggerId=us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-placesNearby)"}}
+[info] i  functions: Beginning execution of "us-central1-placesNearby" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Beginning execution of \"us-central1-placesNearby\""}}
+[debug] [2023-04-17T18:55:15.204Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY"}}
+[debug] [2023-04-17T18:55:15.209Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:55:15.209Z"],"queueLength":1,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:55:15.183Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:55:15.210Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:55:15.183Z","/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:55:15.209Z"],"workRunningCount":2}
+[debug] [2023-04-17T18:55:15.210Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2023-04-17T18:55:15.219Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:55:15.219Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco"}}
+[debug] [2023-04-17T18:55:15.220Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:55:15.222Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-placesNearby" in 26.462ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Finished \"us-central1-placesNearby\" in 26.462ms"}}
+[debug] [2023-04-17T18:55:15.234Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:55:15.234Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:55:15.209Z"],"workRunningCount":1}
+[info] i  functions: Finished "us-central1-geocode" in 13.1487ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 13.1487ms"}}
+[debug] [2023-04-17T18:55:15.238Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:55:15.238Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:55:25.594Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:55:25.594Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:55:25.595Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:55:25.594Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:55:25.596Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=toronto --> us-central1-geocode
+[debug] [2023-04-17T18:55:25.611Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:55:25.612Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=toronto, mapping to path=/?city=toronto {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=toronto, mapping to path=/?city=toronto"}}
+[debug] [2023-04-17T18:55:25.613Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:55:25.615Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 6.4054ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 6.4054ms"}}
+[debug] [2023-04-17T18:55:25.623Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:55:25.624Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:57:08.688Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:57:08.688Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:57:08.688Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:57:08.688Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:57:08.688Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined --> us-central1-placesNearby
+[debug] [2023-04-17T18:57:08.695Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:57:08.696Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined"}}
+[debug] [2023-04-17T18:57:08.696Z] [worker-pool] submitRequest(triggerId=us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-placesNearby)"}}
+[info] i  functions: Beginning execution of "us-central1-placesNearby" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Beginning execution of \"us-central1-placesNearby\""}}
+[debug] [2023-04-17T18:57:08.699Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY"}}
+[debug] [2023-04-17T18:57:08.703Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:57:08.703Z"],"queueLength":1,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:57:08.688Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:57:08.704Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:57:08.688Z","/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:57:08.703Z"],"workRunningCount":2}
+[debug] [2023-04-17T18:57:08.704Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2023-04-17T18:57:08.719Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:57:08.719Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco"}}
+[debug] [2023-04-17T18:57:08.720Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:57:08.721Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-placesNearby" in 27.4689ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Finished \"us-central1-placesNearby\" in 27.4689ms"}}
+[debug] [2023-04-17T18:57:08.728Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:57:08.729Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:57:08.703Z"],"workRunningCount":1}
+[info] i  functions: Finished "us-central1-geocode" in 8.7879ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 8.7879ms"}}
+[debug] [2023-04-17T18:57:08.732Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:57:08.733Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:57:09.499Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:57:09.499Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:57:09.500Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:57:09.499Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:57:09.500Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/placesNearby?location=37.7749295,-122.4194155 --> us-central1-placesNearby
+[debug] [2023-04-17T18:57:09.515Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:57:09.516Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155"}}
+[debug] [2023-04-17T18:57:09.517Z] [worker-pool] submitRequest(triggerId=us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-placesNearby)"}}
+[info] i  functions: Beginning execution of "us-central1-placesNearby" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Beginning execution of \"us-central1-placesNearby\""}}
+[debug] [2023-04-17T18:57:09.522Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY"}}
+[info] i  functions: Finished "us-central1-placesNearby" in 14.3549ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Finished \"us-central1-placesNearby\" in 14.3549ms"}}
+[debug] [2023-04-17T18:57:09.538Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:57:09.539Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:57:28.716Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:57:28.716Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:57:28.716Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:57:28.716Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:57:28.717Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2023-04-17T18:57:28.720Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:57:28.720Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco"}}
+[debug] [2023-04-17T18:57:28.721Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:57:28.722Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[debug] [2023-04-17T18:57:28.723Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:57:28.723Z"],"queueLength":1,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:57:28.716Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:57:28.723Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:57:28.716Z","/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:57:28.723Z"],"workRunningCount":2}
+[debug] [2023-04-17T18:57:28.726Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined --> us-central1-placesNearby
+[debug] [2023-04-17T18:57:28.729Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:57:28.730Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=undefined,undefined, mapping to path=/?location=undefined,undefined"}}
+[debug] [2023-04-17T18:57:28.730Z] [worker-pool] submitRequest(triggerId=us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-placesNearby)"}}
+[info] i  functions: Beginning execution of "us-central1-placesNearby" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Beginning execution of \"us-central1-placesNearby\""}}
+[debug] [2023-04-17T18:57:28.731Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 13.719ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 13.719ms"}}
+[debug] [2023-04-17T18:57:28.737Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:57:28.737Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:57:28.723Z"],"workRunningCount":1}
+[info] i  functions: Finished "us-central1-placesNearby" in 7.2274ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Finished \"us-central1-placesNearby\" in 7.2274ms"}}
+[debug] [2023-04-17T18:57:28.739Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:57:28.739Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:57:37.956Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:57:37.956Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:57:37.957Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-17T18:57:37.956Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:57:37.959Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=toronto --> us-central1-geocode
+[debug] [2023-04-17T18:57:37.972Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:57:37.973Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=toronto, mapping to path=/?city=toronto {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=toronto, mapping to path=/?city=toronto"}}
+[debug] [2023-04-17T18:57:37.973Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-17T18:57:37.976Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 9.2655ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 9.2655ms"}}
+[debug] [2023-04-17T18:57:37.989Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-17T18:57:37.989Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:57:38.797Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:57:38.797Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-17T18:57:38.798Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/placesNearby-2023-04-17T18:57:38.797Z"],"workRunningCount":1}
+[debug] [2023-04-17T18:57:38.799Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/placesNearby?location=43.653225,-79.383186 --> us-central1-placesNearby
+[debug] [2023-04-17T18:57:38.814Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-17T18:57:38.814Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=43.653225,-79.383186, mapping to path=/?location=43.653225,-79.383186 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/placesNearby?location=43.653225,-79.383186, mapping to path=/?location=43.653225,-79.383186"}}
+[debug] [2023-04-17T18:57:38.815Z] [worker-pool] submitRequest(triggerId=us-central1-placesNearby) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-placesNearby)"}}
+[info] i  functions: Beginning execution of "us-central1-placesNearby" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Beginning execution of \"us-central1-placesNearby\""}}
+[debug] [2023-04-17T18:57:38.817Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: BUSY"}}
+[info] i  functions: Finished "us-central1-placesNearby" in 10.7039ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"Finished \"us-central1-placesNearby\" in 10.7039ms"}}
+[debug] [2023-04-17T18:57:38.831Z] [worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-placesNearby"},"extension":{},"message":"[worker-us-central1-placesNearby-7f464e18-9e31-4dad-9828-64fc40e2b40f]: IDLE"}}
+[debug] [2023-04-17T18:57:38.832Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-19T20:48:18.402Z] [work-queue] {"queuedWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-19T20:48:18.342Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-19T20:48:18.505Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/trocanaquebrada-f3b2b/us-central1/geocode-2023-04-19T20:48:18.342Z"],"workRunningCount":1}
+[debug] [2023-04-19T20:48:18.520Z] Accepted request GET /trocanaquebrada-f3b2b/us-central1/geocode?city=Toronto --> us-central1-geocode
+[debug] [2023-04-19T20:48:18.964Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-19T20:48:18.978Z] [functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=Toronto, mapping to path=/?city=Toronto {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/trocanaquebrada-f3b2b/us-central1/geocode?city=Toronto, mapping to path=/?city=Toronto"}}
+[debug] [2023-04-19T20:48:18.979Z] [worker-pool] submitRequest(triggerId=us-central1-geocode) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-geocode)"}}
+[info] i  functions: Beginning execution of "us-central1-geocode" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Beginning execution of \"us-central1-geocode\""}}
+[debug] [2023-04-19T20:48:18.996Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: BUSY"}}
+[info] i  functions: Finished "us-central1-geocode" in 678.2719ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"Finished \"us-central1-geocode\" in 678.2719ms"}}
+[debug] [2023-04-19T20:48:19.664Z] [worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-geocode"},"extension":{},"message":"[worker-us-central1-geocode-f1743b09-c654-464c-a459-644d8c8ce1c2]: IDLE"}}
+[debug] [2023-04-19T20:48:19.664Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}

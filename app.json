@@ -34,6 +34,8 @@
         "projectId": "f1f539d4-3297-45cd-9100-367ae5e79849"
       }
     },
-    "owner": "cristhine"
-  }
+    "owner": "cristhine",
+    "sdkVersion": "48.0.0"
+  },
+  "name": "naquebrada"
 }

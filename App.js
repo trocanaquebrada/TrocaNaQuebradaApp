@@ -5,8 +5,10 @@ import { theme } from "./src/infrastructure/theme";
 import { ProductsContextProvider } from "./src/resources/products/products.context";
 import { LocationContextProvider } from "./src/resources/location/location.context";
 import { Navigation } from "./src/infrastructure/navigation";
-import { initializeApp } from "firebase/app";
 import { AuthenticationContextProvider } from "./src/resources/authentication/authentication.context";
+
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 import {
   useFonts as useOswald,
@@ -28,6 +30,8 @@ export const firebaseApp = initializeApp(firebaseConfig);
 if (!firebaseApp.length) {
   initializeApp(firebaseConfig);
 }
+
+export const firestore = getFirestore(firebaseApp);
 
 export default function App() {
   const [oswaldLoaded] = useOswald({

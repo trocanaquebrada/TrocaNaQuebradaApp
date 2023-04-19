@@ -16,18 +16,16 @@ export const ProductsContextProvider = ({ children }) => {
     setIsLoading(true);
     setProducts([]);
 
-    setTimeout(() => {
-      productsRequest(loc)
-        .then(productsTransform)
-        .then((results) => {
-          setIsLoading(false);
-          setProducts(results);
-        })
-        .catch((err) => {
-          setIsLoading(false);
-          setError(err);
-        });
-    }, 2000);
+    productsRequest(loc)
+      .then(productsTransform)
+      .then((results) => {
+        setIsLoading(false);
+        setProducts(results);
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        setError(err);
+      });
   };
   useEffect(() => {
     if (location) {

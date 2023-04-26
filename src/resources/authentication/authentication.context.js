@@ -1,10 +1,17 @@
-import React, { useState, createContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  getRedirectResult,
+  signInWithRedirect,
 } from "firebase/auth";
+
+import {
+  createUserDocumentFromAuth,
+  googleProvider,
+} from "../../utils/firebase/firebase.utils";
 
 export const AuthenticationContext = createContext();
 

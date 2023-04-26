@@ -3,7 +3,7 @@ import styled from "styled-components";
 const defaultTextStyles = (theme) => `
   font-family: ${theme.fonts.body};
   font-weight: ${theme.fontWeights.regular};
-  color: ${theme.colors.text.primary};
+  color: ${theme.colors.text.secondary};
   flex-wrap: wrap;
   margin-top: 0px;
   margin-bottom: 0px;

@@ -1,17 +1,12 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, createContext } from "react";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  getRedirectResult,
-  signInWithRedirect,
 } from "firebase/auth";
 
-import {
-  createUserDocumentFromAuth,
-  googleProvider,
-} from "../../utils/firebase/firebase.utils";
+import { createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
 
 export const AuthenticationContext = createContext();
 
@@ -34,7 +29,7 @@ export const AuthenticationContextProvider = ({ children }) => {
       });
   };
 
-  const onRegister = (email, password, repeatedPassword) => {
+  const onRegister = async (displayName, email, password, repeatedPassword) => {
     if (password !== repeatedPassword) {
       setError("Erro: Senhas nao batem");
       return;
@@ -42,6 +37,7 @@ export const AuthenticationContextProvider = ({ children }) => {
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
       .then((u) => {
+        // console.log(u.user.uid);
         setUser(u);
         setIsLoading(false);
       })
@@ -49,6 +45,8 @@ export const AuthenticationContextProvider = ({ children }) => {
         setIsLoading(false);
         setError(e.toString());
       });
+    // console.log(auth, email, password, { displayName });
+    await createUserDocumentFromAuth(auth, email, password, { displayName });
   };
 
   const onLogout = () => {

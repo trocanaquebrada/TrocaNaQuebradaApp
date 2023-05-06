@@ -1,6 +1,13 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  addDoc,
+  collection,
+  onAuthStateChanged,
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAEjVsERT9soo-WjVJRWKn0EYGSjzz07_o",
@@ -30,8 +37,7 @@ export const signInWithGoogleRedirect = () => {
 
 //googleProvider.addScope("https://www.googleapis.com/auth/contacts.readonly");
 
-//web:
-//311100487456-263h58v5vsic35g0ps6juiupi3etm604.apps.googleusercontent.com
+//web: 311100487456-263h58v5vsic35g0ps6juiupi3etm604.apps.googleusercontent.com
 
 export const db = getFirestore();
 
@@ -42,9 +48,13 @@ export const createUserDocumentFromAuth = async (
   if (!userAuth) {
     return;
   }
+  /* onAuthStateChanged(auth, (user) => {
+    if (user) {
+      userAuth = user.uid;
+    }
+  }); */
 
   const userDocRef = doc(db, "users", userAuth.uid);
-
   const userSnapshot = await getDoc(userDocRef);
 
   if (!userSnapshot.exists()) {
@@ -52,16 +62,28 @@ export const createUserDocumentFromAuth = async (
     const createdAt = new Date();
 
     try {
-      await setDoc(userDocRef, {
+      await addDoc(collection(userDocRef), {
         displayName,
         email,
         createdAt,
         ...additionalInformation,
       });
     } catch (error) {
-      console.log("error creating the user", error.message);
+      console.log("erro ao criar o usuario", error.message);
     }
   }
-
   return userDocRef;
 };
+
+/*
+try {
+  const docRef = addDoc(collection(db, "users"), {
+    first: "Ada",
+    last: "Lovelace",
+    born: 1815,
+  });
+  console.log("Document written with ID: ", docRef.id);
+} catch (e) {
+  console.error("Error adding document: ", e);
+}
+*/

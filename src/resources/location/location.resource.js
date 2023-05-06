@@ -2,7 +2,7 @@ import camelize from "camelize";
 
 export const locationRequest = async (searchTerm) => {
   const res = await fetch(
-    `http://localhost/trocanaquebrada-f3b2b/us-central1/geocode?city=${searchTerm}`
+    `http://e66f-2804-7f0-bc40-cbe5-145a-8243-a551-82da.ngrok.io/trocanaquebrada-f3b2b/us-central1/geocode?city=${searchTerm}`
   );
   return await res.json();
 };

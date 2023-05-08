@@ -27,10 +27,11 @@ export const ProfileScreen = ({ navigation }) => {
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
   return (
+    //retornar o tamanho do icone de avatar pra 180
     <ProfileBackground>
       <SafeArea>
         <AvatarContainer>
-          <Avatar.Icon size={180} icon="human" backgroundColor="#2182BD" />
+          <Avatar.Icon size={90} icon="human" backgroundColor="#2182BD" />
           <Spacer position="top" size="large">
             <Text variant="label">{user.email}</Text>
           </Spacer>

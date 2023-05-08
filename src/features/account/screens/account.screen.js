@@ -22,6 +22,7 @@ export const AccountScreen = ({ navigation }) => {
 
       if (response) {
         const userDocRef = await createUserDocumentFromAuth(response.user);
+        console.log(userDocRef, '1')
       }
     };
   }, []);

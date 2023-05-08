@@ -1,18 +1,20 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, createContext } from "react";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  getRedirectResult,
-  signInWithRedirect,
 } from "firebase/auth";
 
+<<<<<<< HEAD
 import {
   createUserDocumentFromAuth,
   googleProvider,
 } from "../../utils/firebase/firebase.utils";
 import { getFirestore, doc, getDoc, setDoc, addDoc, collection } from "firebase/firestore";
+=======
+import { createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
+>>>>>>> cf8c967fea2c2b3ee5627eb1cc9f7d11a9f503e5
 
 export const AuthenticationContext = createContext();
 
@@ -45,6 +47,7 @@ export const AuthenticationContextProvider = ({ children }) => {
     const auth = getAuth();
     await createUserWithEmailAndPassword(auth, email, password)
       .then((u) => {
+        // console.log(u.user.uid);
         setUser(u);
         setIsLoading(false);
         try {
@@ -66,6 +69,8 @@ export const AuthenticationContextProvider = ({ children }) => {
         setIsLoading(false);
         setError(e.toString());
       });
+    // console.log(auth, email, password, { displayName });
+    await createUserDocumentFromAuth(auth, email, password, { displayName });
   };
 
   const onLogout = () => {

@@ -17,6 +17,9 @@ export const RegisterScreen = ({ navigation }) => {
   const [password, setPassword] = useState("");
   const [repeatedPassword, setRepeatedPassword] = useState("");
   const { onRegister, isLoading, error } = useContext(AuthenticationContext);
+
+
+
   return (
     <AccountBackground>
       <Title>Troca na Quebrada</Title>
@@ -68,9 +71,13 @@ export const RegisterScreen = ({ navigation }) => {
             <AuthButton
               icon="email"
               mode="contained"
+<<<<<<< HEAD
+              onPress={() => onRegister(displayName, email, password, repeatedPassword)}
+=======
               onPress={() =>
                 onRegister(displayName, email, password, repeatedPassword)
               }
+>>>>>>> cf8c967fea2c2b3ee5627eb1cc9f7d11a9f503e5
             >
               Cadastrar
             </AuthButton>
@@ -87,3 +94,4 @@ export const RegisterScreen = ({ navigation }) => {
     </AccountBackground>
   );
 };
+

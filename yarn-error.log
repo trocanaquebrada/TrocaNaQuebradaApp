@@ -1,20 +1,38 @@
 Arguments: 
+<<<<<<< HEAD
+  C:\Program Files\nodejs\node.exe C:\Users\Andresa\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-native-google-singin
+=======
   C:\Program Files\nodejs\node.exe C:\Users\Cris\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-native
+>>>>>>> cf8c967fea2c2b3ee5627eb1cc9f7d11a9f503e5
 
 PATH: 
-  C:\Users\Cris\Android\Sdk\platform-tools;C:\Users\Cris\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Cris\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Bitvise SSH Client;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Users\Cris\AppData\Local\Programs\Python\Python310\Scripts;C:\Users\Cris\AppData\Local\Programs\Python\Python310;C:\Users\Cris\AppData\Local\Microsoft\WindowsApps;C:\Users\Cris\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Cris\AppData\Roaming\npm;C:\Program Files\vtex\bin;C:\Users\Cris\AppData\Local\Programs\Azure Data Studio\bin;C:\Users\Cris\AppData\Local\GitHubDesktop\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\java\zulu11.58.15-ca-jdk11.0.16-win_x64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\apache-maven-3.8.6\bin;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\TDM-GCC-64\bin;C:\Users\Andresa\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Andresa\AppData\Local\Programs\Python\Python310\;C:\Users\Andresa\AppData\Local\Microsoft\WindowsApps;C:\Users\Andresa\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Andresa\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2\bin;;C:\Program Files\JetBrains\PyCharm 2022.2.1\bin;;C:\Users\Andresa\.dotnet\tools;C:\Users\Andresa\AppData\Local\Programs\Azure Data Studio\bin;C:\Users\Andresa\AppData\Local\GitHubDesktop\bin;C:\Program Files\Android\Android Studio\plataform-tools_r34.0.0-windows;
 
 Yarn version: 
   1.22.19
 
 Node version: 
-  16.15.0
+  16.15.1
 
 Platform: 
   win32 x64
 
 Trace: 
+<<<<<<< HEAD
+  Error: https://registry.yarnpkg.com/react-native-google-singin: Not found
+      at Request.params.callback [as _callback] (C:\Users\Andresa\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66145:18)
+      at Request.self.callback (C:\Users\Andresa\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140890:22)
+      at Request.emit (node:events:527:28)
+      at Request.<anonymous> (C:\Users\Andresa\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141862:10)
+      at Request.emit (node:events:527:28)
+      at IncomingMessage.<anonymous> (C:\Users\Andresa\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141784:12)
+      at Object.onceWrapper (node:events:641:28)
+      at IncomingMessage.emit (node:events:539:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+=======
   Error: EPERM: operation not permitted, unlink 'C:\Users\Cris\Documents\GitHub\TrocaNaQuebradaApp\node_modules\@babel\core\node_modules\@babel\generator\node_modules\.bin'
+>>>>>>> cf8c967fea2c2b3ee5627eb1cc9f7d11a9f503e5
 
 npm manifest: 
   {

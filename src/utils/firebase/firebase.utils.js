@@ -1,8 +1,5 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
-<<<<<<< HEAD
-import { getFirestore, doc, getDoc, setDoc, addDoc, collection } from "firebase/firestore";
-=======
 import {
   getFirestore,
   doc,
@@ -11,7 +8,6 @@ import {
   collection,
   onAuthStateChanged,
 } from "firebase/firestore";
->>>>>>> cf8c967fea2c2b3ee5627eb1cc9f7d11a9f503e5
 
 const firebaseConfig = {
   apiKey: "AIzaSyAEjVsERT9soo-WjVJRWKn0EYGSjzz07_o",
@@ -49,7 +45,6 @@ export const createUserDocumentFromAuth = async (
   userAuth,
   additionalInformation = {}
 ) => {
-<<<<<<< HEAD
   /*   if (!userAuth) {
       return;
     } */
@@ -59,27 +54,13 @@ export const createUserDocumentFromAuth = async (
     }
   });
 
-
-=======
-  if (!userAuth) {
-    return;
-  }
-  /* onAuthStateChanged(auth, (user) => {
-    if (user) {
-      userAuth = user.uid;
-    }
-  }); */
-
   const userDocRef = doc(db, "users", userAuth.uid);
->>>>>>> cf8c967fea2c2b3ee5627eb1cc9f7d11a9f503e5
   const userSnapshot = await getDoc(userDocRef);
 
   if (!userSnapshot.exists()) {
     const { displayName, email } = userAuth;
     const createdAt = new Date();
 
-<<<<<<< HEAD
-=======
     try {
       await addDoc(collection(userDocRef), {
         displayName,
@@ -90,20 +71,6 @@ export const createUserDocumentFromAuth = async (
     } catch (error) {
       console.log("erro ao criar o usuario", error.message);
     }
->>>>>>> cf8c967fea2c2b3ee5627eb1cc9f7d11a9f503e5
   }
   return userDocRef;
 };
-
-/*
-try {
-  const docRef = addDoc(collection(db, "users"), {
-    first: "Ada",
-    last: "Lovelace",
-    born: 1815,
-  });
-  console.log("Document written with ID: ", docRef.id);
-} catch (e) {
-  console.error("Error adding document: ", e);
-}
-*/

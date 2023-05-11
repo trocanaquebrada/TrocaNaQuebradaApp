@@ -6,7 +6,7 @@ import { ProductsContext } from "../../../resources/products/products.context";
 import { LocationContext } from "../../../resources/location/location.context";
 import { Search } from "../components/search.component";
 
-import * as Location from 'expo-location';
+import * as Location from "expo-location";
 
 const Map = styled(MapView)`
   height: 100%;
@@ -29,9 +29,9 @@ export const MapScreen = () => {
       const southwestLat = viewport.southwest.lat;
 
       setLatDelta(northeastLat - southwestLat);
-      /* 
+      /*
             let { status } = await Location.requestForegroundPermissionsAsync();
-      
+
             if (status !== 'granted') {
               console.log('A permissão para acessar o local foi negada');
               return;
@@ -39,7 +39,7 @@ export const MapScreen = () => {
             let location = await Location.getCurrentPositionAsync({});
             setLocation(location);
        */
-    }
+    };
   }, [location, viewport]);
 
   /*   const handleNewMarker = (coordinate) => {
@@ -58,9 +58,9 @@ export const MapScreen = () => {
           latitudeDelta: latDelta,
           longitudeDelta: 0.02,
         }}
-      //showsUserLocation
-      // loadingEnabled
-      //mapType="terrain"
+        //showsUserLocation
+        // loadingEnabled
+        //mapType="terrain"
       >
         {products.map((product) => {
           return (
@@ -85,9 +85,7 @@ export const MapScreen = () => {
   );
 };
 
-
-
-/* mock 
+/* mock
 latitude: 37.42597730214824,
           longitude: -122.0856026405,
           latitudeDelta: 0.0922,

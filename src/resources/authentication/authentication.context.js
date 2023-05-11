@@ -6,15 +6,15 @@ import {
   signOut,
 } from "firebase/auth";
 
-<<<<<<< HEAD
-import {
-  createUserDocumentFromAuth,
-  googleProvider,
-} from "../../utils/firebase/firebase.utils";
-import { getFirestore, doc, getDoc, setDoc, addDoc, collection } from "firebase/firestore";
-=======
 import { createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
->>>>>>> cf8c967fea2c2b3ee5627eb1cc9f7d11a9f503e5
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  addDoc,
+  collection,
+} from "firebase/firestore";
 
 export const AuthenticationContext = createContext();
 
@@ -39,7 +39,16 @@ export const AuthenticationContextProvider = ({ children }) => {
       });
   };
 
-  const onRegister = async (displayName, email, password, repeatedPassword) => {
+  const onRegister = async (
+    displayName,
+    cpf,
+    address,
+    postalCode,
+    cityAndState,
+    email,
+    password,
+    repeatedPassword
+  ) => {
     if (password !== repeatedPassword) {
       setError("Erro: Senhas nao batem");
       return;
@@ -50,20 +59,19 @@ export const AuthenticationContextProvider = ({ children }) => {
         // console.log(u.user.uid);
         setUser(u);
         setIsLoading(false);
-        try {
-          const createdAt = new Date();
+        const createdAt = new Date();
 
-          console.log(u)
-          setDoc(doc(db, "users", u.user.uid), {
-            displayName,
-            email,
-            createdAt,
-            //    ...additionalInformation,
-          });
-        } catch (error) {
-          console.log("erro ao criar o usuario", error.message);
-        }
-
+        console.log(u);
+        setDoc(doc(db, "users", u.user.uid), {
+          displayName,
+          cpf,
+          address,
+          postalCode,
+          cityAndState,
+          email,
+          createdAt,
+          //    ...additionalInformation,
+        });
       })
       .catch((e) => {
         setIsLoading(false);

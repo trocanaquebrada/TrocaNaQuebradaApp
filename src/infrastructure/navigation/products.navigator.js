@@ -13,7 +13,7 @@ export const ProductsNavigator = () => {
         headerMode: "none",
       }}
     >
-      <ProductStack.Screen name="Produtos" component={ProductsScreen} />
+      <ProductStack.Screen name="ProductsPage" component={ProductsScreen} />
     </ProductStack.Navigator>
   );
 };

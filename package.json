@@ -12,6 +12,7 @@
   "dependencies": {
     "@expo-google-fonts/lato": "^0.2.2",
     "@expo-google-fonts/oswald": "^0.2.2",
+    "@react-native-async-storage/async-storage": "1.17.11",
     "@react-native-firebase/app": "^17.3.2",
     "@react-native-google-signin/google-signin": "^9.0.2",
     "@react-navigation/bottom-tabs": "^6.5.4",
@@ -21,6 +22,7 @@
     "doctor": "^0.3.0",
     "expo": "^48.0.16",
     "expo-auth-session": "^4.0.3",
+    "expo-camera": "~13.2.1",
     "expo-cli": "^6.3.2",
     "expo-font": "~11.1.1",
     "expo-google-sign-in": "^11.0.0",
@@ -47,7 +49,7 @@
     "@babel/core": "^7.12.9",
     "@react-native-community/eslint-config": "^3.2.0",
     "babel-plugin-styled-components": "^2.0.7",
-    "eslint": "^8.33.0",
+    "eslint": "^8.40.0",
     "prettier": "^2.8.4"
   },
   "private": true

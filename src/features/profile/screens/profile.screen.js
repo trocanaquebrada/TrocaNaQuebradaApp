@@ -55,7 +55,7 @@ export const ProfileScreen = ({ navigation }) => {
         <List.Section>
           <ProfileContainer>
             <Spacer size="medium">
-              <Text> Bem Vindo </Text>
+              <Text> Ola {user.displayName} </Text>
             </Spacer>
             <Spacer size="medium">
               <ProfileButton
@@ -74,7 +74,6 @@ export const ProfileScreen = ({ navigation }) => {
           />
           <ProfileItem
           // **rating
-          // **cadastro produtos
           />
         </List.Section>
       </SafeArea>

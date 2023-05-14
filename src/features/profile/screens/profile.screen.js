@@ -1,16 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
+import { TouchableOpacity } from "react-native";
 import { List, Avatar } from "react-native-paper";
-
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { AuthenticationContext } from "../../../resources/authentication/authentication.context";
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { Text } from "../../../components/typography/text.component";
 import {
-  ProfileInput,
   ProfileBackground,
   ProfileContainer,
-  Title,
+  ProfileButton,
 } from "../components/profile.styles";
 
 const ProfileItem = styled(List.Item)`
@@ -22,43 +22,49 @@ const AvatarContainer = styled.View`
 
 export const ProfileScreen = ({ navigation }) => {
   const { onLogout, user } = useContext(AuthenticationContext);
-  const [name, setName] = useState("");
-  const [cpf, setCpf] = useState("");
-  const [address, setAddress] = useState("");
-  const [phone, setPhone] = useState("");
+  const [photo, setPhoto] = useState(null);
+
+  const getProfilePicture = async (currentUser) => {
+    const photoUri = await AsyncStorage.getItem(`${currentUser.uid}-photo`);
+    setPhoto(photoUri);
+  };
+  useEffect(() => {
+    getProfilePicture(user);
+  }, [user]);
+
   return (
-    //retornar o tamanho do icone de avatar pra 180
     <ProfileBackground>
       <SafeArea>
         <AvatarContainer>
-          <Avatar.Icon size={90} icon="human" backgroundColor="#2182BD" />
+          <TouchableOpacity onPress={() => navigation.navigate("Camera")}>
+            {!photo && (
+              <Avatar.Icon size={180} icon="human" backgroundColor="#2182BD" />
+            )}
+            {photo && (
+              <Avatar.Image
+                size={180}
+                source={{ uri: photo }}
+                backgroundColor="#2182BD"
+              />
+            )}
+          </TouchableOpacity>
           <Spacer position="top" size="large">
             <Text variant="label">{user.email}</Text>
           </Spacer>
         </AvatarContainer>
         <List.Section>
           <ProfileContainer>
-            <Title> Dados Pessoais </Title>
-            <ProfileInput
-              label="Nome Completo"
-              value={name}
-              onChangeText={(n) => setName(n)}
-            />
-            <ProfileInput
-              label="CPF"
-              value={cpf}
-              onChangeText={(c) => setCpf(c)}
-            />
-            <ProfileInput
-              label="Endereco"
-              value={address}
-              onChangeText={(ad) => setAddress(ad)}
-            />
-            <ProfileInput
-              label="Celular"
-              value={phone}
-              onChangeText={(cel) => setPhone(cel)}
-            />
+            <Spacer size="medium">
+              <Text> Ola {user.displayName} </Text>
+            </Spacer>
+            <Spacer size="medium">
+              <ProfileButton
+                mode="contained"
+                onPress={() => navigation.navigate("AddProductScreen")}
+              >
+                Cadastrar Produto/Servico
+              </ProfileButton>
+            </Spacer>
           </ProfileContainer>
 
           <ProfileItem
@@ -68,7 +74,6 @@ export const ProfileScreen = ({ navigation }) => {
           />
           <ProfileItem
           // **rating
-          // **cadastro produtos
           />
         </List.Section>
       </SafeArea>

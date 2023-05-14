@@ -31,7 +31,8 @@ export const AppNavigator = () => (
     <ProductsContextProvider>
       <Tab.Navigator
         screenOptions={
-          ({ createScreenOptions },
+          ({ headerMode: "none" },
+          { createScreenOptions },
           {
             tabBarActiveTintColor: "purple",
             tabBarInactiveTintColor: "gray",

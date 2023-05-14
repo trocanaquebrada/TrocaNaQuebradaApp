@@ -6,12 +6,16 @@ import {
   Title,
 } from "../components/account.styles";
 
-import { getRedirectResult, createUserDocumentFromAuth } from "firebase/auth";
-
 import {
-  auth,
-  signInWithGoogleRedirect,
-} from "../../../utils/firebase/firebase.utils";
+  getRedirectResult,
+  createUserDocumentFromAuth,
+  GoogleAuthProvider,
+  signInWithRedirect,
+  signInWithPopup,
+  getAuth,
+} from "firebase/auth";
+
+import { auth } from "../../../utils/firebase/firebase.utils";
 
 import { Spacer } from "../../../components/spacer/spacer.component";
 
@@ -26,6 +30,11 @@ export const AccountScreen = ({ navigation }) => {
       }
     };
   }, []);
+
+  const signInWithGoogle = async () => {
+    const { user } = await signInWithPopup();
+    await createUserDocumentFromAuth(auth, user);
+  };
 
   return (
     <AccountBackground>
@@ -51,7 +60,7 @@ export const AccountScreen = ({ navigation }) => {
           <AuthButton
             icon="lock-open-outline"
             mode="contained"
-            onPress={() => signInWithGoogleRedirect}
+            onPress={signInWithGoogle}
           >
             Entrar com o Google
           </AuthButton>

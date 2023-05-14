@@ -4,6 +4,8 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  GoogleAuthProvider,
+  signInWithRedirect,
 } from "firebase/auth";
 
 import { createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";

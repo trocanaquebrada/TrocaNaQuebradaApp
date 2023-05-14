@@ -1,5 +1,10 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithRedirect,
+  signInWithPopup,
+} from "firebase/auth";
 import {
   getFirestore,
   doc,
@@ -24,16 +29,26 @@ if (!firebaseApp.length) {
   initializeApp(firebaseConfig);
 }
 
-export const googleProvider = new GoogleAuthProvider();
+const googleProvider = new GoogleAuthProvider();
+
 googleProvider.setCustomParameters({
   prompt: "select_account",
 });
+export const signInWithGooglePopup = () =>
+  signInWithPopup(auth, googleProvider);
+export const signInWithGoogleRedirect = () =>
+  signInWithRedirect(auth, googleProvider);
+
+/* export const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({
+  prompt: "select_account",
+}); */
 
 const auth = getAuth();
 
-export const signInWithGoogleRedirect = () => {
+/* export const signInWithGoogleRedirect = () => {
   signInWithRedirect(auth, googleProvider);
-};
+}; */
 
 //googleProvider.addScope("https://www.googleapis.com/auth/contacts.readonly");
 
@@ -54,7 +69,7 @@ export const createUserDocumentFromAuth = async (
     }
   });
 
-  const userDocRef = doc(db, "users", userAuth.uid);
+  /* const userDocRef = doc(db, "users", userAuth.uid);
   const userSnapshot = await getDoc(userDocRef);
 
   if (!userSnapshot.exists()) {
@@ -72,5 +87,5 @@ export const createUserDocumentFromAuth = async (
       console.log("erro ao criar o usuario", error.message);
     }
   }
-  return userDocRef;
+  return userDocRef;*/
 };

@@ -20,8 +20,8 @@ export const MapScreen = () => {
   const [latDelta, setLatDelta] = useState(0);
 
   const { lat, lng, viewport } = location;
-  /*   const [setLocation] = useState(null)
-    const [marker, setMarker] = useState([]); */
+  const [setLocation] = useState(null);
+  const [marker, setMarker] = useState([]);
 
   useEffect(() => {
     async () => {
@@ -29,36 +29,35 @@ export const MapScreen = () => {
       const southwestLat = viewport.southwest.lat;
 
       setLatDelta(northeastLat - southwestLat);
-      /*
-            let { status } = await Location.requestForegroundPermissionsAsync();
 
-            if (status !== 'granted') {
-              console.log('A permissão para acessar o local foi negada');
-              return;
-            }
-            let location = await Location.getCurrentPositionAsync({});
-            setLocation(location);
-       */
+      const { status } = await Location.requestForegroundPermissionsAsync();
+
+      if (status !== "granted") {
+        console.log("A permissão para acessar o local foi negada");
+        return;
+      }
+      const locationUser = await Location.getCurrentPositionAsync({});
+      setLocation(locationUser);
     };
-  }, [location, viewport]);
+  }, [location, viewport, setLocation]);
 
-  /*   const handleNewMarker = (coordinate) => {
-      setMarker([...marker, coordinate]);
-      console.log(marker)
-    }; */
-
+  const handleNewMarker = (coordinate) => {
+    setMarker([...marker, coordinate]);
+    console.log(marker);
+  };
+  //precisa levar o marker para a pagina do usuario
   return (
     <>
       <Search />
       <Map
-        // onPress={(e) => handleNewMarker(e.nativeEvent.coordinate)}
+        onPress={(e) => handleNewMarker(e.nativeEvent.coordinate)}
         region={{
           latitude: lat,
           longitude: lng,
           latitudeDelta: latDelta,
           longitudeDelta: 0.02,
         }}
-        //showsUserLocation
+        showsUserLocation
         // loadingEnabled
         //mapType="terrain"
       >
@@ -74,12 +73,10 @@ export const MapScreen = () => {
             />
           );
         })}
-        {/*  {marker.length > 0 &&
+        {marker.length > 0 &&
           marker.map((m) => {
-            return (
-              <Marker coordinate={m} key={Math.random().toString()} />
-            );
-          })} */}
+            return <Marker coordinate={m} key={Math.random().toString()} />;
+          })}
       </Map>
     </>
   );

@@ -43,8 +43,6 @@ export const AuthenticationContextProvider = ({ children }) => {
     displayName,
     cpf,
     address,
-    postalCode,
-    cityAndState,
     email,
     password,
     repeatedPassword
@@ -66,8 +64,6 @@ export const AuthenticationContextProvider = ({ children }) => {
           displayName,
           cpf,
           address,
-          postalCode,
-          cityAndState,
           email,
           createdAt,
           //    ...additionalInformation,

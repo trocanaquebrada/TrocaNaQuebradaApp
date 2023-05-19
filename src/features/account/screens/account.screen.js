@@ -18,6 +18,7 @@ import {
 import { auth } from "../../../utils/firebase/firebase.utils";
 
 import { Spacer } from "../../../components/spacer/spacer.component";
+import { Provider } from "react-native-paper";
 
 export const AccountScreen = ({ navigation }) => {
   useEffect(() => {
@@ -31,10 +32,10 @@ export const AccountScreen = ({ navigation }) => {
     };
   }, []);
 
-  const signInWithGoogle = async () => {
-    const { user } = await signInWithPopup();
+  /*   const signInWithGoogle = async () => {
+    const { user } = await signInWithPopup(auth, Provider);
     await createUserDocumentFromAuth(auth, user);
-  };
+  }; */
 
   return (
     <AccountBackground>
@@ -56,7 +57,7 @@ export const AccountScreen = ({ navigation }) => {
             Cadastrar
           </AuthButton>
         </Spacer>
-        <Spacer size="large">
+        {/* <Spacer size="large">
           <AuthButton
             icon="lock-open-outline"
             mode="contained"
@@ -64,7 +65,7 @@ export const AccountScreen = ({ navigation }) => {
           >
             Entrar com o Google
           </AuthButton>
-        </Spacer>
+        </Spacer> */}
       </AccountContainer>
     </AccountBackground>
   );

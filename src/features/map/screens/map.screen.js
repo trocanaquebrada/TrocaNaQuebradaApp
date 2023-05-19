@@ -37,6 +37,7 @@ export const MapScreen = () => {
         return;
       }
       const locationUser = await Location.getCurrentPositionAsync({});
+      console.log("localização do usuario= ", locationUser);
       setLocation(locationUser);
     };
   }, [location, viewport, setLocation]);
@@ -45,7 +46,7 @@ export const MapScreen = () => {
     setMarker([...marker, coordinate]);
     console.log(marker);
   };
-  //precisa levar o marker para a pagina do usuario
+  //precisa levar o marker para a pagina de produto
   return (
     <>
       <Search />

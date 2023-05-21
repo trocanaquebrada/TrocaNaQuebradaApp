@@ -6,14 +6,19 @@ import {
   Title,
 } from "../components/account.styles";
 
-import { getRedirectResult, createUserDocumentFromAuth } from "firebase/auth";
-
 import {
-  auth,
-  signInWithGoogleRedirect,
-} from "../../../utils/firebase/firebase.utils";
+  getRedirectResult,
+  createUserDocumentFromAuth,
+  GoogleAuthProvider,
+  signInWithRedirect,
+  signInWithPopup,
+  getAuth,
+} from "firebase/auth";
+
+import { auth } from "../../../utils/firebase/firebase.utils";
 
 import { Spacer } from "../../../components/spacer/spacer.component";
+import { Provider } from "react-native-paper";
 
 export const AccountScreen = ({ navigation }) => {
   useEffect(() => {
@@ -26,6 +31,11 @@ export const AccountScreen = ({ navigation }) => {
       }
     };
   }, []);
+
+  /*   const signInWithGoogle = async () => {
+    const { user } = await signInWithPopup(auth, Provider);
+    await createUserDocumentFromAuth(auth, user);
+  }; */
 
   return (
     <AccountBackground>
@@ -47,15 +57,15 @@ export const AccountScreen = ({ navigation }) => {
             Cadastrar
           </AuthButton>
         </Spacer>
-        <Spacer size="large">
+        {/* <Spacer size="large">
           <AuthButton
             icon="lock-open-outline"
             mode="contained"
-            onPress={() => signInWithGoogleRedirect}
+            onPress={signInWithGoogle}
           >
             Entrar com o Google
           </AuthButton>
-        </Spacer>
+        </Spacer> */}
       </AccountContainer>
     </AccountBackground>
   );

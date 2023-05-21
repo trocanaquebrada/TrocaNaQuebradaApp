@@ -4,17 +4,14 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  GoogleAuthProvider,
+  signInWithRedirect,
 } from "firebase/auth";
 
 import { createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
-import {
-  getFirestore,
-  doc,
-  getDoc,
-  setDoc,
-  addDoc,
-  collection,
-} from "firebase/firestore";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
+
+import Geocode from "react-geocode";
 
 export const AuthenticationContext = createContext();
 
@@ -24,6 +21,7 @@ export const AuthenticationContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
+  const [coordinates, setCoordinates] = useState(null);
 
   const onLogin = (email, password) => {
     setIsLoading(true);
@@ -51,6 +49,16 @@ export const AuthenticationContextProvider = ({ children }) => {
       setError("Erro: Senhas nao batem");
       return;
     }
+
+    Geocode.setApiKey("AIzaSyAEjVsERT9soo-WjVJRWKn0EYGSjzz07_o");
+    Geocode.setLanguage("pt-BR");
+    Geocode.setRegion(address);
+    Geocode.setLocationType("ROOFTOP");
+    const response = await Geocode.fromAddress(address);
+    const { lat, lng } = response.results[0].geometry.location;
+    setUser((prevState) => ({ ...prevState, lat, lng }));
+    console.log(response);
+
     const auth = getAuth();
     await createUserWithEmailAndPassword(auth, email, password)
       .then((u) => {
@@ -59,13 +67,15 @@ export const AuthenticationContextProvider = ({ children }) => {
         setIsLoading(false);
         const createdAt = new Date();
 
-        console.log(u);
+        //console.log(u);
         setDoc(doc(db, "users", u.user.uid), {
           displayName,
           cpf,
           address,
           email,
           createdAt,
+          lat,
+          lng,
           //    ...additionalInformation,
         });
       })
@@ -75,6 +85,7 @@ export const AuthenticationContextProvider = ({ children }) => {
       });
     // console.log(auth, email, password, { displayName });
     await createUserDocumentFromAuth(auth, email, password, { displayName });
+    //navigation.navigate('AddProductScreen', { lat, lng });
   };
 
   const onLogout = () => {

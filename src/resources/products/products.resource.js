@@ -2,7 +2,7 @@ import camelize from "camelize";
 
 export const productsRequest = async (location) => {
   const res = await fetch(
-    `http://751b-2804-7f0-bc41-1e8e-9836-e100-8133-7330.ngrok.io/trocanaquebrada-f3b2b/us-central1/placesNearby?location=${location}`
+    `https://us-central1-trocanaquebrada-f3b2b.cloudfunctions.net/placesNearby/us-central1/placesNearby?location=${location}`
   );
   return await res.json();
 };

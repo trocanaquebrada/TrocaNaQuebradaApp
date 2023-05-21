@@ -1,5 +1,10 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithRedirect,
+  signInWithPopup,
+} from "firebase/auth";
 import {
   getFirestore,
   doc,
@@ -24,16 +29,26 @@ if (!firebaseApp.length) {
   initializeApp(firebaseConfig);
 }
 
-export const googleProvider = new GoogleAuthProvider();
+const googleProvider = new GoogleAuthProvider();
+
 googleProvider.setCustomParameters({
   prompt: "select_account",
 });
+export const signInWithGooglePopup = () =>
+  signInWithPopup(auth, googleProvider);
+export const signInWithGoogleRedirect = () =>
+  signInWithRedirect(auth, googleProvider);
+
+/* export const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({
+  prompt: "select_account",
+}); */
 
 const auth = getAuth();
 
-export const signInWithGoogleRedirect = () => {
+/* export const signInWithGoogleRedirect = () => {
   signInWithRedirect(auth, googleProvider);
-};
+}; */
 
 //googleProvider.addScope("https://www.googleapis.com/auth/contacts.readonly");
 
@@ -41,36 +56,16 @@ export const signInWithGoogleRedirect = () => {
 
 export const db = getFirestore();
 
-export const createUserDocumentFromAuth = async (
+/* export const createUserDocumentFromAuth = async (
   userAuth,
   additionalInformation = {}
 ) => {
   /*   if (!userAuth) {
       return;
-    } */
+    }
   onAuthStateChanged(auth, (user) => {
     if (user) {
       userAuth = user.uid;
     }
   });
-
-  const userDocRef = doc(db, "users", userAuth.uid);
-  const userSnapshot = await getDoc(userDocRef);
-
-  if (!userSnapshot.exists()) {
-    const { displayName, email } = userAuth;
-    const createdAt = new Date();
-
-    try {
-      await addDoc(collection(userDocRef), {
-        displayName,
-        email,
-        createdAt,
-        ...additionalInformation,
-      });
-    } catch (error) {
-      console.log("erro ao criar o usuario", error.message);
-    }
-  }
-  return userDocRef;
-};
+}; */

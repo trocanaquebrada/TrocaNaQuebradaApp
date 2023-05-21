@@ -13,6 +13,10 @@ import {
   ProfileButton,
 } from "../components/profile.styles";
 
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+
+import { getAuth } from "firebase/auth";
+
 const ProfileItem = styled(List.Item)`
   padding: ${(props) => props.theme.space[3]};
 `;
@@ -23,13 +27,28 @@ const AvatarContainer = styled.View`
 export const ProfileScreen = ({ navigation }) => {
   const { onLogout, user } = useContext(AuthenticationContext);
   const [photo, setPhoto] = useState(null);
+  const [userDoc, setUserDoc] = useState(null);
 
-  const getProfilePicture = async (currentUser) => {
-    const photoUri = await AsyncStorage.getItem(`${currentUser.uid}-photo`);
+  const getProfilePicture = async () => {
+    const db = getFirestore();
+    const auth = getAuth();
+    const userRef = auth.currentUser.uid;
+    const docRef = await getDoc(doc(db, "users", userRef));
+    const photoUri = await AsyncStorage.getItem(`${docRef.uid}-photo`);
     setPhoto(photoUri);
   };
+
   useEffect(() => {
-    getProfilePicture(user);
+    const fetchData = async () => {
+      const db = getFirestore();
+      const auth = getAuth();
+      const userRef = auth.currentUser.uid;
+      const docRef = await getDoc(doc(db, "users", userRef));
+      const userData = docRef.data();
+      setUserDoc(userData);
+      getProfilePicture(user);
+    };
+    fetchData();
   }, [user]);
 
   return (
@@ -49,20 +68,20 @@ export const ProfileScreen = ({ navigation }) => {
             )}
           </TouchableOpacity>
           <Spacer position="top" size="large">
-            <Text variant="label">{user.email}</Text>
+            <Text variant="label">{userDoc?.email}</Text>
           </Spacer>
         </AvatarContainer>
         <List.Section>
           <ProfileContainer>
             <Spacer size="medium">
-              <Text> Ola {user.displayName} </Text>
+              <Text>Olá {userDoc?.displayName}</Text>
             </Spacer>
             <Spacer size="medium">
               <ProfileButton
                 mode="contained"
                 onPress={() => navigation.navigate("AddProductScreen")}
               >
-                Cadastrar Produto/Servico
+                Cadastrar Produto/Serviço
               </ProfileButton>
             </Spacer>
           </ProfileContainer>

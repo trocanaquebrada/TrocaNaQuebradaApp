@@ -7,6 +7,20 @@ import { LocationContext } from "../../../resources/location/location.context";
 import { Search } from "../components/search.component";
 
 import * as Location from "expo-location";
+import {
+  getFirestore,
+  doc,
+  addDoc,
+  setDoc,
+  getDoc,
+  collection,
+} from "firebase/firestore";
+
+import {
+  createUserDocumentFromAuth,
+  getAuth,
+  onAuthStateChanged,
+} from "firebase/auth";
 
 const Map = styled(MapView)`
   height: 100%;
@@ -17,49 +31,57 @@ export const MapScreen = () => {
   const { location } = useContext(LocationContext);
   const { products = [] } = useContext(ProductsContext);
 
-  const [latDelta, setLatDelta] = useState(0);
+  const [latDeltaViewport, setLatDeltaViewport] = useState(0);
 
-  const { lat, lng, viewport } = location;
-  /*   const [setLocation] = useState(null)
-    const [marker, setMarker] = useState([]); */
+  const [mapRegion, setMapRegion] = useState(null);
+  const [marker, setMarker] = useState([]);
 
   useEffect(() => {
-    async () => {
-      const northeastLat = viewport.northeast.lat;
-      const southwestLat = viewport.southwest.lat;
+    (async () => {
+      const { status } = await Location.requestForegroundPermissionsAsync();
 
-      setLatDelta(northeastLat - southwestLat);
-      /*
-            let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== "granted") {
+        console.log("A permissão para acessar o local foi negada");
+        return;
+      }
+      const locationUser = await Location.getCurrentPositionAsync({});
+      /*       console.log("localização do usuario= ", locationUser); */
 
-            if (status !== 'granted') {
-              console.log('A permissão para acessar o local foi negada');
-              return;
-            }
-            let location = await Location.getCurrentPositionAsync({});
-            setLocation(location);
-       */
-    };
-  }, [location, viewport]);
+      const db = getFirestore();
+      const auth = getAuth();
+      const userRef = auth.currentUser.uid;
+      const userDoc = await getDoc(doc(db, "users", userRef));
+      const userLocation = {
+        lat: userDoc.data().lat,
+        lng: userDoc.data().lng,
+      };
+      if (userLocation) {
+        const northeastLat = userLocation.lat;
+        const southwestLat = userLocation.lat;
+        const latDelta = northeastLat - southwestLat;
 
-  /*   const handleNewMarker = (coordinate) => {
-      setMarker([...marker, coordinate]);
-      console.log(marker)
-    }; */
-
+        setLatDeltaViewport(latDelta);
+        setMapRegion({
+          latitude: userLocation.lat,
+          longitude: userLocation.lng,
+          latitudeDelta: latDelta,
+          longitudeDelta: 0.0421,
+        });
+      }
+    })();
+  }, []);
+  /*   const handleNewMarker = (latDelta) => {
+    setMarker([...marker, latDelta]);
+    console.log(marker);
+  }; */
+  //precisa levar o marker para a pagina de produto
   return (
     <>
       <Search />
       <Map
-        // onPress={(e) => handleNewMarker(e.nativeEvent.coordinate)}
-        region={{
-          latitude: lat,
-          longitude: lng,
-          latitudeDelta: latDelta,
-          longitudeDelta: 0.02,
-        }}
-        //showsUserLocation
-        // loadingEnabled
+        region={mapRegion}
+        showsUserLocation
+        loadingEnabled
         //mapType="terrain"
       >
         {products.map((product) => {
@@ -74,19 +96,11 @@ export const MapScreen = () => {
             />
           );
         })}
-        {/*  {marker.length > 0 &&
+        {marker.length > 0 &&
           marker.map((m) => {
-            return (
-              <Marker coordinate={m} key={Math.random().toString()} />
-            );
-          })} */}
+            return <Marker coordinate={m} key={Math.random().toString()} />;
+          })}
       </Map>
     </>
   );
 };
-
-/* mock
-latitude: 37.42597730214824,
-          longitude: -122.0856026405,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421, */

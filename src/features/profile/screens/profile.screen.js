@@ -85,6 +85,22 @@ export const ProfileScreen = ({ navigation }) => {
                 Cadastrar Produto/Serviço
               </ProfileButton>
             </Spacer>
+            <Spacer size="medium">
+              <ProfileButton
+                mode="contained"
+                onPress={() => navigation.navigate("Localizacao")}
+              >
+                Buscar Produto/Serviço no Mapa
+              </ProfileButton>
+            </Spacer>
+            <Spacer size="medium">
+              <ProfileButton
+                mode="contained"
+                onPress={() => navigation.navigate("ProductsPage")}
+              >
+                Buscar Produto/Serviço na Lista
+              </ProfileButton>
+            </Spacer>
           </ProfileContainer>
 
           <ProfileItem

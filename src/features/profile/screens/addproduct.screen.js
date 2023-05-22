@@ -38,11 +38,11 @@ export const AddProductScreen = ({ navigation }) => {
   const onSaveProduct = async () => {
     const userRef = auth.currentUser.uid;
     const userDoc = await getDoc(doc(db, "users", userRef));
-    console.log(userRef, "userRef addproduct");
     const getLocUser = {
       lat: userDoc.data().lat,
       lng: userDoc.data().lng,
     };
+    //da a opção de troca, add a camera salva a foto
     try {
       const createdAt = new Date();
       const productData = {

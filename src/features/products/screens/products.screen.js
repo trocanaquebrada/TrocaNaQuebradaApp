@@ -25,6 +25,7 @@ const LoadingContainer = styled(View)`
 export const ProductsScreen = () => {
   const { isLoading, products } = useContext(ProductsContext);
 
+  //pegar o produtos de todos os usuarios  salvo e trazer pra ca
   return (
     <SafeArea>
       {isLoading && (

@@ -70,6 +70,7 @@ export const MapScreen = () => {
       }
     })();
   }, []);
+  //trazer os produtos e cadastrar os markers dele aqui
   /*   const handleNewMarker = (latDelta) => {
     setMarker([...marker, latDelta]);
     console.log(marker);

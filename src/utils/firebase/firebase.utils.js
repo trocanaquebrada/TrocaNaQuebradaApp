@@ -5,14 +5,7 @@ import {
   signInWithRedirect,
   signInWithPopup,
 } from "firebase/auth";
-import {
-  getFirestore,
-  doc,
-  getDoc,
-  addDoc,
-  collection,
-  onAuthStateChanged,
-} from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAEjVsERT9soo-WjVJRWKn0EYGSjzz07_o",

@@ -14,7 +14,7 @@ module.exports.placesRequest = (request, response) => {
 const { locationPlaces } = require("./geocode").locations;
 const url = require("https://maps.googleapis.com/maps/api/js?AIzaSyAEjVsERT9soo-WjVJRWKn0EYGSjzz07_o&callback=initMap");
 
-module.exports.placesRequest = (request, response) => {
+/* module.exports.placesRequest = (request, response) => {
   const { location } = url.parse(request.url, true).query;
   const data = locationPlaces[location];
   console.log(data);
@@ -23,4 +23,4 @@ module.exports.placesRequest = (request, response) => {
   }
 
   response.json(data);
-};
+}; */

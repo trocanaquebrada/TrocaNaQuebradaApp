@@ -2,7 +2,10 @@ import React, { useState, useContext, createContext, useEffect } from "react";
 
 import { productsRequest, productsTransform } from "./products.resource";
 
-import { LocationContext } from "../location/location.context";
+import {
+  LocationContext,
+  LocationContextProvider,
+} from "../location/location.context";
 
 export const ProductsContext = createContext();
 
@@ -35,14 +38,16 @@ export const ProductsContextProvider = ({ children }) => {
   }, [location]);
 
   return (
-    <ProductsContext.Provider
-      value={{
-        products,
-        isLoading,
-        error,
-      }}
-    >
-      {children}
-    </ProductsContext.Provider>
+    <LocationContextProvider>
+      <ProductsContext.Provider
+        value={{
+          products,
+          isLoading,
+          error,
+        }}
+      >
+        {children}
+      </ProductsContext.Provider>
+    </LocationContextProvider>
   );
 };

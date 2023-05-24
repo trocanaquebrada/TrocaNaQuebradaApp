@@ -12,20 +12,20 @@ import {
   getFirestore,
   doc,
   addDoc,
-  setDoc,
   getDoc,
   collection,
 } from "firebase/firestore";
-import { ActivityIndicator, MD2Colors } from "react-native-paper";
+import { ActivityIndicator, MD2Colors, Avatar } from "react-native-paper";
 import { AuthButton } from "../../account/components/account.styles";
 import { AuthenticationContext } from "../../../resources/authentication/authentication.context";
-import Geocode from "react-geocode";
-
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import styled from "styled-components";
 import { createUserDocumentFromAuth, getAuth } from "firebase/auth";
+import { TouchableOpacity } from "react-native";
 
-const db = getFirestore();
-const auth = getAuth();
-
+const ProductContainer = styled.View`
+  align-items: center;
+`;
 export const AddProductScreen = ({ navigation }) => {
   const [value, setValue] = useState(null);
   const [error, setError] = useState(null);
@@ -34,7 +34,9 @@ export const AddProductScreen = ({ navigation }) => {
   const { isLoading } = useContext(AuthenticationContext);
   const [setIsLoading] = useState(false);
   const [setProductData] = useState(null);
-
+  const [photo, setPhoto] = useState(null);
+  const db = getFirestore();
+  const auth = getAuth();
   const onSaveProduct = async () => {
     const userRef = auth.currentUser.uid;
     const userDoc = await getDoc(doc(db, "users", userRef));
@@ -44,6 +46,10 @@ export const AddProductScreen = ({ navigation }) => {
     };
     //da a opção de troca, add a camera salva a foto
     try {
+      const docRef = await getDoc(doc(db, "users", userRef));
+      const photoUri = await AsyncStorage.getItem(`${docRef}-photo`);
+      setPhoto(photoUri);
+
       const createdAt = new Date();
       const productData = {
         userRef,
@@ -75,6 +81,20 @@ export const AddProductScreen = ({ navigation }) => {
   return (
     <ProfileBackground>
       <SafeArea>
+        <ProductContainer>
+          <TouchableOpacity onPress={() => navigation.navigate("Camera")}>
+            {!photo && (
+              <Avatar.Icon size={180} icon="human" backgroundColor="#2182BD" />
+            )}
+            {photo && (
+              <Avatar.Image
+                size={180}
+                source={{ uri: photo }}
+                backgroundColor="#2182BD"
+              />
+            )}
+          </TouchableOpacity>
+        </ProductContainer>
         <ProfileContainer>
           <Spacer size="medium">
             <Text> Cadastrar Produto: </Text>

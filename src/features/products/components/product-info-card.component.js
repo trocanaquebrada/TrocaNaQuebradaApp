@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
 import { Text, View } from "react-native";
 import { Card } from "react-native-paper";
@@ -54,7 +54,7 @@ const Available = styled(SvgXml)`
 
 export const ProductInfoCard = ({ product = {} }) => {
   const {
-    name = "Conjunto Fitness",
+    name,
     /*icon,*/
     photos = [
       "https://cdn.shopify.com/s/files/1/0649/5223/8331/products/conjunto-fitness-legging-e-top-degrade-conjunto-de-academia-feminino-roupa-de-academia-utilidadesweb01-rosa-pink-p-152991_600x600_crop_center.jpg?v=1670868851",

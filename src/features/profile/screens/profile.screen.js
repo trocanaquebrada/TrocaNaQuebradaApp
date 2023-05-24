@@ -51,7 +51,6 @@ export const ProfileScreen = ({ navigation }) => {
     fetchData();
   }, [user]);
 
-  //adicionar um botao para busca de produto pelo mapa e pela lista
   return (
     <ProfileBackground>
       <SafeArea>

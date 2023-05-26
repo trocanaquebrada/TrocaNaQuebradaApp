@@ -1,7 +1,8 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
 import { Camera, requestCameraPermissionsAsync } from "expo-camera";
 import styled from "styled-components";
-import { View, TouchableOpacity } from "react-native";
+import { View } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 import { Text } from "../../../components/typography/text.component";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 

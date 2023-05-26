@@ -6,7 +6,6 @@ import { ProductInfoCard } from "../components/product-info-card.component";
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { ProductsContext } from "../../../resources/products/products.context";
 import { Search } from "../components/search.component";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 const ProductList = styled(FlatList).attrs({
   contentContainerStyle: {
@@ -25,28 +24,9 @@ const LoadingContainer = styled(View)`
 `;
 
 export const ProductsScreen = () => {
-  const { isLoading, product } = useContext(ProductsContext);
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    const db = getFirestore();
-    const productSearch = async () => {
-      const productCollectionRef = collection(db, "Product");
-      const productsCollection = await getDocs(productCollectionRef);
-      const productsData = productsCollection.docs.map((doc) => {
-        const { nameProduct, lat, lng, userRef, id } = doc.data();
-        return {
-          name: nameProduct || "",
-          latitude: lat || "",
-          longitude: lng || "",
-          ref: userRef || "",
-          id: doc.id || "",
-        };
-      });
-      setProducts(productsData);
-    };
-    productSearch();
-  }, []);
-
+  const { isLoading } = useContext(ProductsContext);
+  const { products } = useContext(ProductsContext);
+  console.log("product screen");
   //pegar o produtos de todos os usuarios  salvo e trazer pra ca
   return (
     <SafeArea>

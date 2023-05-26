@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { View, FlatList } from "react-native";
+import { View, FlatList, TouchableOpacity } from "react-native";
 import { ActivityIndicator, MD2Colors } from "react-native-paper";
 import styled from "styled-components";
 import { ProductInfoCard } from "../components/product-info-card.component";
@@ -7,6 +7,7 @@ import { SafeArea } from "../../../components/utility/safe-area.component";
 import { ProductsContext } from "../../../resources/products/products.context";
 import { Search } from "../components/search.component";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { Spacer } from "../../../components/spacer/spacer.component";
 
 const ProductList = styled(FlatList).attrs({
   contentContainerStyle: {
@@ -24,8 +25,8 @@ const LoadingContainer = styled(View)`
   left: 50%;
 `;
 
-export const ProductsScreen = () => {
-  const { isLoading, product } = useContext(ProductsContext);
+export const ProductsScreen = ({ navigation }) => {
+  const { isLoading } = useContext(ProductsContext);
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const db = getFirestore();
@@ -60,7 +61,21 @@ export const ProductsScreen = () => {
 
       <ProductList
         data={products}
-        renderItem={({ item }) => <ProductInfoCard product={item} />}
+        renderItem={({ item }) => {
+          return (
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate("ProductDetail", {
+                  product: item,
+                })
+              }
+            >
+              <Spacer position="bottom" size="large">
+                <ProductInfoCard product={item} />
+              </Spacer>
+            </TouchableOpacity>
+          );
+        }}
         keyExtractor={(item) => item.id}
         contentContainerStyle={{ padding: 16 }}
       />

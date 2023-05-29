@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { Text } from "../../../components/typography/text.component";
 
@@ -18,53 +18,57 @@ import {
   Icon,
   Address,
 } from "./product-info-card.styles";
+console.log("product-info-card fora");
 
-export const ProductInfoCard = ({ product = {} }) => {
-  const [products, setProducts] = useState([]);
-  console.log(products);
-  console.log("ProductInfoCard");
-  useEffect(() => {
-    const db = getFirestore();
-    const productSearch = async () => {
-      const productCollectionRef = collection(db, "Product");
-      console.log(productCollectionRef);
-      const productsCollection = await getDocs(productCollectionRef);
-      /*       const photoUri = await AsyncStorage.getItem(`${docRef.uid}-photo`);
-      setPhoto(photoUri); */
-      const productsData = productsCollection.docs.map((doc) => {
-        const { nameProduct, lat, lng, userRef, id, address } = doc.data();
-        return {
-          name: nameProduct || "",
-          address: address || "",
-          latitude: lat || "",
-          longitude: lng || "",
-          ref: userRef || "",
-          id: doc.id || "",
-        };
-      });
-      console.log(productsData);
-      setProducts(productsData);
+const db = getFirestore();
+const productCollectionRef = collection(db, "Product");
+
+const searchProducts = async () => {
+  const productsCollection = await getDocs(productCollectionRef);
+  const productsData = productsCollection.docs.map((doc) => {
+    const { nameProduct, lat, lng, userRef, id, address, photos } = doc.data();
+    return {
+      name: nameProduct || "",
+      address: address || "",
+      latitude: lat || "",
+      longitude: lng || "",
+      ref: userRef || "",
+      id: doc.id || "",
+      photos: photos || [
+        "https://cdn.shopify.com/s/files/1/0649/5223/8331/products/conjunto-fitness-legging-e-top-degrade-conjunto-de-academia-feminino-roupa-de",
+      ],
     };
-    productSearch();
-  }, []);
+  });
+  console.log(productsData);
+  return productsData;
+};
+console.log("searchProduct");
+//searchProducts();
+console.log(searchProducts());
+export const ProductInfoCard = ({ products = {} }) => {
+  console.log("product-info-card dentro");
+  //const [products, setProducts] = useState([]);
 
-  const {
-    name,
-    /*icon,*/
-    photos = [
-      "https://cdn.shopify.com/s/files/1/0649/5223/8331/products/conjunto-fitness-legging-e-top-degrade-conjunto-de-academia-feminino-roupa-de-academia-utilidadesweb01-rosa-pink-p-152991_600x600_crop_center.jpg?v=1670868851",
-    ],
-    address,
-    rating = 4,
-    placeId,
-    /*isAvailable = true,*/
-  } = product;
+  const getProductsData = async () => {
+    try {
+      const products = await searchProducts();
 
-  const ratingArray = Array.from(new Array(Math.floor(rating)));
+      const { name, photos, address, rating = 4, placeId } = products;
 
+      console.log(products);
+    } catch (error) {
+      console.error("Erro ao obter os dados dos produtos:", error);
+    }
+  };
+
+  getProductsData();
+  const { name, photos, address, rating = 4, placeId } = products[0];
+
+  const ratingArray = Array.from(new Array(Math.floor(products.rating)));
+  console.log("passou aqui");
   return (
     <ProductCard elevation={5}>
-      <ProductCardCover key={name} source={{ uri: photos[0] }} />
+      <ProductCardCover key={name} source={{ products: photos[0] }} />
       <Info>
         <Text variant="label">{name}</Text>
         <Section>

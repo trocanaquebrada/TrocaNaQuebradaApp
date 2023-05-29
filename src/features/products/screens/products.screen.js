@@ -26,27 +26,7 @@ const LoadingContainer = styled(View)`
 `;
 
 export const ProductsScreen = ({ navigation }) => {
-  const { isLoading } = useContext(ProductsContext);
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    const db = getFirestore();
-    const productSearch = async () => {
-      const productCollectionRef = collection(db, "Product");
-      const productsCollection = await getDocs(productCollectionRef);
-      const productsData = productsCollection.docs.map((doc) => {
-        const { nameProduct, lat, lng, userRef, id } = doc.data();
-        return {
-          name: nameProduct || "",
-          latitude: lat || "",
-          longitude: lng || "",
-          ref: userRef || "",
-          id: doc.id || "",
-        };
-      });
-      setProducts(productsData);
-    };
-    productSearch();
-  }, []);
+  const { isLoading, products } = useContext(ProductsContext);
 
   //pegar o produtos de todos os usuarios  salvo e trazer pra ca
   return (

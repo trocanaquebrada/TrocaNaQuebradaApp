@@ -5,7 +5,6 @@ import { View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Text } from "../../../components/typography/text.component";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import { AuthenticationContext } from "../../../resources/authentication/authentication.context";
 
 const ProfileCamera = styled(Camera)`

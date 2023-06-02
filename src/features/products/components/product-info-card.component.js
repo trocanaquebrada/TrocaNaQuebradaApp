@@ -5,7 +5,8 @@ import { Text } from "../../../components/typography/text.component";
 import { SvgXml } from "react-native-svg";
 import star from "../../../../assets/star";
 /*import available from "../../assets/available";*/
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../../utils/firebase/firebase.utils";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import {
@@ -18,9 +19,8 @@ import {
   Icon,
   Address,
 } from "./product-info-card.styles";
-console.log("product-info-card fora");
+//console.log("product-info-card fora");
 
-const db = getFirestore();
 const productCollectionRef = collection(db, "Product");
 
 const searchProducts = async () => {
@@ -39,12 +39,13 @@ const searchProducts = async () => {
       ],
     };
   });
-  console.log(productsData);
+  //console.log(productsData);
   return productsData;
 };
-console.log("searchProduct");
+
+//console.log("searchProduct");
 //searchProducts();
-console.log(searchProducts());
+//console.log(searchProducts());
 export const ProductInfoCard = ({ products = {} }) => {
   console.log("product-info-card dentro");
   //const [products, setProducts] = useState([]);

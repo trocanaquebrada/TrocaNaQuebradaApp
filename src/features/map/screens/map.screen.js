@@ -5,13 +5,13 @@ import styled from "styled-components";
 import { ProductsContext } from "../../../resources/products/products.context";
 import { LocationContext } from "../../../resources/location/location.context";
 import { Search } from "../components/search.component";
-
+import { db } from "../../../utils/firebase/firebase.utils";
 import * as Location from "expo-location";
 import {
   getFirestore,
   doc,
   addDoc,
-  setDoc,
+  getDocs,
   getDoc,
   collection,
 } from "firebase/firestore";
@@ -47,7 +47,6 @@ export const MapScreen = () => {
       const locationUser = await Location.getCurrentPositionAsync({});
       /*       console.log("localização do usuario= ", locationUser); */
 
-      const db = getFirestore();
       const auth = getAuth();
       const userRef = auth.currentUser.uid;
       const userDoc = await getDoc(doc(db, "users", userRef));
@@ -68,14 +67,35 @@ export const MapScreen = () => {
           longitudeDelta: 0.0421,
         });
       }
+      console.log("aqui");
+      const productCollectionRef = collection(db, "Product");
+      const productsCollection = await getDocs(productCollectionRef);
+      const productsData = productsCollection.docs.map((doc) => {
+        const { nameProduct, lat, lng, userRef, id, address, photos } =
+          doc.data();
+        return {
+          name: nameProduct || "",
+          address: address || "",
+          latitude: lat || "",
+          longitude: lng || "",
+          ref: userRef || "",
+          id: doc.id || "",
+          photos: photos || [
+            "https://cdn.shopify.com/s/files/1/0649/5223/8331/products/conjunto-fitness-legging-e-top-degrade-conjunto-de-academia-feminino-roupa-de",
+          ],
+        };
+      });
+      setMarker(
+        productsData.map((data) => ({
+          name: data.name,
+          latitude: data.latitude,
+          longitude: data.longitude,
+          longitudeDelta: 0.0421,
+        }))
+      );
     })();
-  }, []);
-  //trazer os produtos e cadastrar os markers dele aqui
-  /*   const handleNewMarker = (latDelta) => {
-    setMarker([...marker, latDelta]);
-    console.log(marker);
-  }; */
-  //precisa levar o marker para a pagina de produto
+  }, [marker]);
+
   return (
     <>
       <Search />
@@ -85,22 +105,17 @@ export const MapScreen = () => {
         loadingEnabled
         //mapType="terrain"
       >
-        {products.map((product) => {
+        {marker.map((m) => {
           return (
             <Marker
-              key={product.name}
-              title={product.name}
               coordinate={{
-                latitude: product.geometry.location.lat,
-                longitude: product.geometry.location.lng,
+                latitude: m.latitude,
+                longitude: m.longitude,
               }}
+              key={Math.random().toString()}
             />
           );
         })}
-        {marker.length > 0 &&
-          marker.map((m) => {
-            return <Marker coordinate={m} key={Math.random().toString()} />;
-          })}
       </Map>
     </>
   );

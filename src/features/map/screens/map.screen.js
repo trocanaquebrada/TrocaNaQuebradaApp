@@ -67,7 +67,7 @@ export const MapScreen = () => {
           longitudeDelta: 0.0421,
         });
       }
-      console.log("aqui");
+
       const productCollectionRef = collection(db, "Product");
       const productsCollection = await getDocs(productCollectionRef);
       const productsData = productsCollection.docs.map((doc) => {

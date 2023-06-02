@@ -6,8 +6,10 @@ import { ProductInfoCard } from "../components/product-info-card.component";
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { ProductsContext } from "../../../resources/products/products.context";
 import { Search } from "../components/search.component";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { Spacer } from "../../../components/spacer/spacer.component";
+import { db } from "../../../utils/firebase/firebase.utils";
+import { productsRequest } from "../../../resources/products/products.resource";
 
 const ProductList = styled(FlatList).attrs({
   contentContainerStyle: {
@@ -26,7 +28,26 @@ const LoadingContainer = styled(View)`
 `;
 
 export const ProductsScreen = ({ navigation }) => {
-  const { isLoading, products } = useContext(ProductsContext);
+  const { isLoading, product } = useContext(ProductsContext);
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    const productSearch = async () => {
+      const productCollectionRef = collection(db, "Product");
+      const productsCollection = await getDocs(productCollectionRef);
+      const productsData = productsCollection.docs.map((doc) => {
+        const { nameProduct, lat, lng, userRef, id } = doc.data();
+        return {
+          name: nameProduct || "",
+          latitude: lat || "",
+          longitude: lng || "",
+          ref: userRef || "",
+          id: doc.id || "",
+        };
+      });
+      setProducts(productsData);
+    };
+    productSearch();
+  }, []);
 
   //pegar o produtos de todos os usuarios  salvo e trazer pra ca
   return (

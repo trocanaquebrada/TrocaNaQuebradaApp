@@ -30,7 +30,7 @@ const LoadingContainer = styled(View)`
 export const ProductsScreen = ({ navigation }) => {
   const { isLoading, product } = useContext(ProductsContext);
   const [products, setProducts] = useState([]);
-  useEffect(() => {
+  /*   useEffect(() => {
     const productSearch = async () => {
       const productCollectionRef = collection(db, "Product");
       const productsCollection = await getDocs(productCollectionRef);
@@ -47,7 +47,7 @@ export const ProductsScreen = ({ navigation }) => {
       setProducts(productsData);
     };
     productSearch();
-  }, []);
+  }, []); */
 
   //pegar o produtos de todos os usuarios  salvo e trazer pra ca
   return (

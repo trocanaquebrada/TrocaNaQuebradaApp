@@ -1,5 +1,5 @@
 /* const { mocks, addMockImage } = require("./mock");
-const url = require("url");
+
 
 module.exports.placesRequest = (request, response) => {
   const { location } = url.parse(request.url, true).query;
@@ -11,8 +11,9 @@ module.exports.placesRequest = (request, response) => {
   response.json(data);
 };
  */
-const { locationPlaces } = require("./geocode").locations;
-const url = require("https://maps.googleapis.com/maps/api/js?AIzaSyAEjVsERT9soo-WjVJRWKn0EYGSjzz07_o&callback=initMap");
+const url = require("url");
+//const { locationPlaces } = require("./geocode").locations;
+//const url = require("https://maps.googleapis.com/maps/api/js?AIzaSyAEjVsERT9soo-WjVJRWKn0EYGSjzz07_o&callback=initMap");
 
 /* module.exports.placesRequest = (request, response) => {
   const { location } = url.parse(request.url, true).query;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Card } from "react-native-paper";
+import { Card, Button } from "react-native-paper";
+import { colors } from "../../../infrastructure/theme/colors";
 
 export const Icon = styled.Image`
   width: 15px;
@@ -13,6 +14,12 @@ export const ProductCard = styled(Card)`
 export const ProductCardCover = styled(Card.Cover)`
   padding: ${(props) => props.theme.space[3]};
   background-color: ${(props) => props.theme.colors.bg.primary};
+`;
+
+export const ProductButton = styled(Button).attrs({
+  color: colors.brand.primary,
+})`
+  padding: ${(props) => props.theme.space[2]};
 `;
 
 export const Address = styled.Text`

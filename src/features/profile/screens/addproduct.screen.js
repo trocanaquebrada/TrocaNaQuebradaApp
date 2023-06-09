@@ -41,6 +41,7 @@ export const AddProductScreen = ({ navigation }) => {
     const userRef = auth.currentUser.uid;
     const userDoc = await getDoc(doc(db, "users", userRef));
     const getLocUser = {
+      address: userDoc.data().address,
       lat: userDoc.data().lat,
       lng: userDoc.data().lng,
     };

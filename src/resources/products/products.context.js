@@ -20,7 +20,7 @@ export const ProductsContextProvider = ({ children }) => {
     setProducts([]);
 
     productsRequest(loc)
-      .then(productsTransform)
+      //.then(productsTransform)
       .then((results) => {
         setIsLoading(false);
         setProducts(results);

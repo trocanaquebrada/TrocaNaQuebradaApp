@@ -13,23 +13,24 @@ export const productsRequest = async () => {
   const productCollectionRef = collection(db, "Product");
   const productsCollection = await getDocs(productCollectionRef);
   const productsData = productsCollection.docs.map((doc) => {
-    const { nameProduct, lat, lng, userRef, id, address, photos } = doc.data();
+    const { nameProduct, lat, lng, userRef, placeId, address, photos } =
+      doc.data();
     return {
       name: nameProduct || "",
       address: address || "",
       latitude: lat || "",
       longitude: lng || "",
       ref: userRef || "",
-      id: doc.id || "",
+      placeId: doc.id || "",
       photos: photos || [
-        "https://cdn.shopify.com/s/files/1/0649/5223/8331/products/conjunto-fitness-legging-e-top-degrade-conjunto-de-academia-feminino-roupa-de",
+        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fadoropapel.com.br%2F2021%2F05%2Fvoce-realmente-conhece-o-papel-veja-4-livros-sobre-o-material%2F&psig=AOvVaw0MqHvb0xQyGqzJsQ978dDT&ust=1686433213262000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJi737aTt_8CFQAAAAAdAAAAABAE",
       ],
     };
   });
   console.log(productsData);
-  return productsData.json();
+  return productsData;
 };
-//console.log(productsRequest());
+
 export const productsTransform = ({ results = [] }) => {
   const mappedResults = results.map((product) => {
     return {

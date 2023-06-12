@@ -26,30 +26,12 @@ const LoadingContainer = styled(View)`
   top: 50%;
   left: 50%;
 `;
-
+//console.log("productScrean");
 export const ProductsScreen = ({ navigation }) => {
-  const { isLoading, product } = useContext(ProductsContext);
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    const productSearch = async () => {
-      const productCollectionRef = collection(db, "Product");
-      const productsCollection = await getDocs(productCollectionRef);
-      const productsData = productsCollection.docs.map((doc) => {
-        const { nameProduct, lat, lng, userRef, id } = doc.data();
-        return {
-          name: nameProduct || "",
-          latitude: lat || "",
-          longitude: lng || "",
-          ref: userRef || "",
-          id: doc.id || "",
-        };
-      });
-      setProducts(productsData);
-    };
-    productSearch();
-  }, []);
-
-  //pegar o produtos de todos os usuarios  salvo e trazer pra ca
+  const { isLoading, products } = useContext(ProductsContext);
+  //const [products, setProducts] = useState([]);
+  //console.log(products);
+  console.log("product");
   return (
     <SafeArea>
       {isLoading && (

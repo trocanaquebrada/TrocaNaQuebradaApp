@@ -26,7 +26,7 @@ const Map = styled(MapView)`
   height: 100%;
   width: 100%;
 `;
-
+console.log("MapScreen");
 export const MapScreen = () => {
   const { location } = useContext(LocationContext);
   const { products = [] } = useContext(ProductsContext);
@@ -38,13 +38,13 @@ export const MapScreen = () => {
 
   useEffect(() => {
     (async () => {
-      const { status } = await Location.requestForegroundPermissionsAsync();
+      /*       const { status } = await Location.requestForegroundPermissionsAsync();
 
       if (status !== "granted") {
         console.log("A permissão para acessar o local foi negada");
         return;
       }
-      const locationUser = await Location.getCurrentPositionAsync({});
+      const locationUser = await Location.getCurrentPositionAsync({}); */
       /*       console.log("localização do usuario= ", locationUser); */
 
       const auth = getAuth();

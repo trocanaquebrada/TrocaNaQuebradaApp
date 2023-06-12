@@ -35,7 +35,7 @@ export const ProductInfoCard = ({ product = {} }) => {
   const ratingArray = Array.from(new Array(Math.floor(rating)));
   return (
     <ProductCard elevation={5}>
-      <ProductCardCover key={placeId.id} source={{ products: photos }} />
+      <ProductCardCover key={placeId} source={{ uri: photos[0] }} />
       <Info>
         <Text variant="label">{name}</Text>
         <Section>

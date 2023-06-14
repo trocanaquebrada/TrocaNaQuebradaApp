@@ -27,7 +27,6 @@ const LoadingContainer = styled(View)`
   left: 50%;
 `;
 
-console.log("productScrean");
 export const ProductsScreen = ({ navigation }) => {
   const { isLoading, products } = useContext(ProductsContext);
   return (

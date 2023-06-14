@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useRef, useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import { TouchableOpacity } from "react-native";
 import { List, Avatar } from "react-native-paper";
@@ -16,6 +16,9 @@ import {
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 import { getAuth } from "firebase/auth";
+import { storage } from "../../../utils/firebase/firebase.utils";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { onSnapshot, onSnapshotsInSync } from "firebase/firestore";
 
 const ProfileItem = styled(List.Item)`
   padding: ${(props) => props.theme.space[3]};
@@ -28,12 +31,36 @@ export const ProfileScreen = ({ navigation }) => {
   const { onLogout, user } = useContext(AuthenticationContext);
   const [photo, setPhoto] = useState(null);
   const [userDoc, setUserDoc] = useState(null);
+  const [imgURL, setImgURL] = useState("");
+  const [progress, setProgress] = useState(0);
+  const cameraRef = useRef();
 
   const getProfilePicture = async () => {
     const db = getFirestore();
     const auth = getAuth();
     const userRef = auth.currentUser.uid;
     const docRef = await getDoc(doc(db, "users", userRef));
+    const photo = await cameraRef.current.takePictureAsync();
+    const storageRef = ref(storage, `imagesPerfil/${photo.uid}`);
+    const uploadTask = uploadBytesResumable(storageRef, photo);
+    uploadTask.on(
+      "state_changed",
+      (onSnapshotsInSync) => {
+        const progress = Math.round(
+          (onSnapshotsInSync.bytesTransferred / onSnapshotsInSync.totalBytes) *
+            100
+        );
+        setProgress(progress);
+      },
+      (error) => {
+        alert(error);
+      },
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          setImgURL(downloadURL);
+        });
+      }
+    );
     const photoUri = await AsyncStorage.getItem(`${docRef.uid}-photo`);
     setPhoto(photoUri);
   };

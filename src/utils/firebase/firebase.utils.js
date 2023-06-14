@@ -6,6 +6,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAEjVsERT9soo-WjVJRWKn0EYGSjzz07_o",
@@ -17,7 +18,7 @@ const firebaseConfig = {
 };
 
 export const firebaseApp = initializeApp(firebaseConfig);
-
+export const storage = getStorage();
 if (!firebaseApp.length) {
   initializeApp(firebaseConfig);
 }

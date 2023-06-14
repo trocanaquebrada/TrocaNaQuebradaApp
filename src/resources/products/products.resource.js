@@ -22,12 +22,10 @@ export const productsRequest = async () => {
       longitude: lng || "",
       ref: userRef || "",
       placeId: doc.id || "",
-      photos: photos || [
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fadoropapel.com.br%2F2021%2F05%2Fvoce-realmente-conhece-o-papel-veja-4-livros-sobre-o-material%2F&psig=AOvVaw0MqHvb0xQyGqzJsQ978dDT&ust=1686433213262000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJi737aTt_8CFQAAAAAdAAAAABAE",
-      ],
+      photos: photos || ["https://picsum.photos/300/300"],
     };
   });
-  console.log(productsData);
+  //console.log(productsData);
   return productsData;
 };
 

@@ -85,6 +85,7 @@ export const MapScreen = () => {
           ],
         };
       });
+
       setMarker(
         productsData.map((data) => ({
           name: data.name,

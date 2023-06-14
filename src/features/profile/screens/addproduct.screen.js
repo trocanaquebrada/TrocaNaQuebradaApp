@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useRef, useState, useContext } from "react";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { Text } from "../../../components/typography/text.component";
 import { SafeArea } from "../../../components/utility/safe-area.component";
@@ -35,6 +35,7 @@ export const AddProductScreen = ({ navigation }) => {
   const [setIsLoading] = useState(false);
   const [setProductData] = useState(null);
   const [photo, setPhoto] = useState(null);
+
   const db = getFirestore();
   const auth = getAuth();
   const onSaveProduct = async () => {

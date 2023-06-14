@@ -26,12 +26,9 @@ const LoadingContainer = styled(View)`
   top: 50%;
   left: 50%;
 `;
-//console.log("productScrean");
+
 export const ProductsScreen = ({ navigation }) => {
   const { isLoading, products } = useContext(ProductsContext);
-  //const [products, setProducts] = useState([]);
-  //console.log(products);
-  console.log("product");
   return (
     <SafeArea>
       {isLoading && (

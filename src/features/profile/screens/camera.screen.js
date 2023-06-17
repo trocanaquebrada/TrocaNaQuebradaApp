@@ -25,7 +25,7 @@ export const CameraScreen = ({ navigation }) => {
   const snap = async () => {
     if (cameraRef) {
       const photo = await cameraRef.current.takePictureAsync();
-      const storageRef = ref(storage, `imagesProducts/${photo.name}`);
+      const storageRef = ref(storage, `imagesProducts/${photo.uri}`);
       const uploadTask = uploadBytesResumable(storageRef, photo);
       uploadTask.on(
         "state_changed",

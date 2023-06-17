@@ -5,9 +5,6 @@ import { Text } from "../../../components/typography/text.component";
 import { SvgXml } from "react-native-svg";
 import star from "../../../../assets/star";
 /*import available from "../../assets/available";*/
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../../utils/firebase/firebase.utils";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import {
   ProductCard,
@@ -25,17 +22,17 @@ export const ProductInfoCard = ({ product = {} }) => {
     name,
     /*icon,*/
     photos,
+    formattedDistance,
     address,
     rating = 4,
     placeId,
     /*isAvailable = true,*/
   } = product;
 
-  //fazer uma função para transformar o address em uma função de localização relativa
   const ratingArray = Array.from(new Array(Math.floor(rating)));
   return (
     <ProductCard elevation={5}>
-      <ProductCardCover key={placeId} source={{ uri: photos[0] }} />
+      <ProductCardCover key={placeId.id} source={{ uri: photos[0] }} />
       <Info>
         <Text variant="label">{name}</Text>
         <Section>
@@ -53,7 +50,7 @@ export const ProductInfoCard = ({ product = {} }) => {
             {isAvailable && <Available xml={available} width={20} height={20} />}
             </SectionEnd>*/}
         </Section>
-        {/* <Address>{address}</Address> */}
+        <Address>{formattedDistance}</Address>
       </Info>
     </ProductCard>
   );

@@ -6,10 +6,7 @@ import { ProductInfoCard } from "../components/product-info-card.component";
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { ProductsContext } from "../../../resources/products/products.context";
 import { Search } from "../components/search.component";
-import { collection, getDocs } from "firebase/firestore";
 import { Spacer } from "../../../components/spacer/spacer.component";
-import { db } from "../../../utils/firebase/firebase.utils";
-import { productsRequest } from "../../../resources/products/products.resource";
 
 const ProductList = styled(FlatList).attrs({
   contentContainerStyle: {

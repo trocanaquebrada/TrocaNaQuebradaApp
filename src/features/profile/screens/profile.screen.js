@@ -40,8 +40,8 @@ export const ProfileScreen = ({ navigation }) => {
     const auth = getAuth();
     const userRef = auth.currentUser.uid;
     const docRef = await getDoc(doc(db, "users", userRef));
-    const photo = await cameraRef.current.takePictureAsync();
-    const storageRef = ref(storage, `imagesPerfil/${photo.uid}`);
+    //const photo = await cameraRef.current.takePictureAsync();
+    /*const storageRef = ref(storage, `imagesPerfil/${photo.uid}`);
     const uploadTask = uploadBytesResumable(storageRef, photo);
     uploadTask.on(
       "state_changed",
@@ -60,7 +60,7 @@ export const ProfileScreen = ({ navigation }) => {
           setImgURL(downloadURL);
         });
       }
-    );
+    );*/
     const photoUri = await AsyncStorage.getItem(`${docRef.uid}-photo`);
     setPhoto(photoUri);
   };

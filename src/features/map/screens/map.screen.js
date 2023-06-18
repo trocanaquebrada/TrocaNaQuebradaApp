@@ -80,9 +80,7 @@ export const MapScreen = () => {
           longitude: lng || "",
           ref: userRef || "",
           id: doc.id || "",
-          photos: photos || [
-            "https://cdn.shopify.com/s/files/1/0649/5223/8331/products/conjunto-fitness-legging-e-top-degrade-conjunto-de-academia-feminino-roupa-de",
-          ],
+          photos: photos || ["https://picsum.photos/300/300"],
         };
       });
 

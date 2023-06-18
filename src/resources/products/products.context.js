@@ -1,6 +1,6 @@
 import React, { useState, useContext, createContext, useEffect } from "react";
 
-import { productsRequest, productsTransform } from "./products.resource";
+import { productsRequest, productsDistance } from "./products.resource";
 
 import {
   LocationContext,
@@ -18,10 +18,10 @@ export const ProductsContextProvider = ({ children }) => {
   const retrieveProducts = (loc) => {
     setIsLoading(true);
     setProducts([]);
-
+    /*     productsDistance(loc)*/
     productsRequest(loc)
-      //.then(productsTransform)
       .then((results) => {
+        //productsDistance({});
         setIsLoading(false);
         setProducts(results);
       })

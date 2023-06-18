@@ -1,6 +1,8 @@
 import camelize from "camelize";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { db } from "../../utils/firebase/firebase.utils";
+import { getAuth } from "firebase/auth";
+import * as geolib from "geolib";
 
 export const productsRequest = async () => {
   /*   const res = await fetch(
@@ -25,17 +27,78 @@ export const productsRequest = async () => {
       photos: photos || ["https://picsum.photos/300/300"],
     };
   });
-  //console.log(productsData);
-  return productsData;
-};
+  const auth = getAuth();
+  const userRef = auth.currentUser.uid;
+  const userDoc = await getDoc(doc(db, "users", userRef));
+  const userLocation = {
+    name: userDoc.data().displayName,
+    latitude: userDoc.data().lat,
+    longitude: userDoc.data().lng,
+  };
+  const distances = productsData.map((result) => {
+    const distance = geolib.getDistance(
+      { latitude: userLocation.latitude, longitude: userLocation.longitude },
+      { latitude: result.latitude, longitude: result.longitude }
+    );
 
-export const productsTransform = ({ results = [] }) => {
-  const mappedResults = results.map((product) => {
+    const formattedDistance =
+      distance < 1000
+        ? `${distance} metros`
+        : `${(distance / 1000).toFixed(1)} km`;
+
     return {
-      ...product,
-      address: product.vicinity,
+      formattedDistance: formattedDistance,
     };
   });
 
-  return camelize(mappedResults);
+  const mergedData = productsData.map((product, index) => {
+    return {
+      ...product,
+      ...distances[index],
+    };
+  });
+
+  return mergedData;
 };
+
+/* export const productsDistance = async () => {
+  const productsData = await productsRequest();
+  const mappedResults = productsData.map((doc) => {
+    const { latitude, longitude, address } = doc;
+    return {
+      address: address,
+      latitude: latitude,
+      longitude: longitude,
+    };
+  });
+  const auth = getAuth();
+  const userRef = auth.currentUser.uid;
+  const userDoc = await getDoc(doc(db, "users", userRef));
+  const userLocation = {
+    name: userDoc.data().displayName,
+    latitude: userDoc.data().lat,
+    longitude: userDoc.data().lng,
+  };
+  const distances = mappedResults.map((result) => {
+    const distance = geolib.getDistance(
+      { latitude: userLocation.latitude, longitude: userLocation.longitude },
+      { latitude: result.latitude, longitude: result.longitude }
+    );
+
+    const formattedDistance =
+      distance < 1000
+        ? `${distance} metros`
+        : `${(distance / 1000).toFixed(1)} km`;
+
+    return {
+      //distance: distance,
+      formattedDistance,
+    };
+  });
+
+  return {
+    //mappedResults: mappedResults,
+    distances: distances,
+  };
+};
+ */

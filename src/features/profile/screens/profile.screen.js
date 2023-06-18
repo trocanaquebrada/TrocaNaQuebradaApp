@@ -40,7 +40,7 @@ export const ProfileScreen = ({ navigation }) => {
     const auth = getAuth();
     const userRef = auth.currentUser.uid;
     const docRef = await getDoc(doc(db, "users", userRef));
-    const photo = await cameraRef.current.takePictureAsync();
+    //const photo = await cameraRef.current.takePictureAsync();
     /*const storageRef = ref(storage, `imagesPerfil/${photo.uid}`);
     const uploadTask = uploadBytesResumable(storageRef, photo);
     uploadTask.on(

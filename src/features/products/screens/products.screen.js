@@ -53,7 +53,7 @@ export const ProductsScreen = ({ navigation }) => {
             </TouchableOpacity>
           );
         }}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.placeId}
         contentContainerStyle={{ padding: 16 }}
       />
     </SafeArea>

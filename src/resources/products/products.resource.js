@@ -15,10 +15,11 @@ export const productsRequest = async () => {
   const productCollectionRef = collection(db, "Product");
   const productsCollection = await getDocs(productCollectionRef);
   const productsData = productsCollection.docs.map((doc) => {
-    const { nameProduct, lat, lng, userRef, placeId, address, photos } =
+    const { nameProduct, lat, lng, userRef, placeId, address, photos, value } =
       doc.data();
     return {
       name: nameProduct || "",
+      value: value || "",
       address: address || "",
       latitude: lat || "",
       longitude: lng || "",

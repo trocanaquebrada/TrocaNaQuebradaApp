@@ -87,6 +87,7 @@ export const MapScreen = () => {
       setMarker(
         productsData.map((data) => ({
           name: data.name,
+          photo: data.photos,
           latitude: data.latitude,
           longitude: data.longitude,
           longitudeDelta: 0.0421,
@@ -107,6 +108,7 @@ export const MapScreen = () => {
         {marker.map((m) => {
           return (
             <Marker
+              title={m.name}
               coordinate={{
                 latitude: m.latitude,
                 longitude: m.longitude,

@@ -22,6 +22,7 @@ export const ProductInfoCard = ({ product = {} }) => {
     name,
     /*icon,*/
     photos,
+    value,
     formattedDistance,
     address,
     rating = 4,
@@ -35,6 +36,7 @@ export const ProductInfoCard = ({ product = {} }) => {
       <ProductCardCover key={placeId.id} source={{ uri: photos[0] }} />
       <Info>
         <Text variant="label">{name}</Text>
+        <Text variant="label">{value}</Text>
         <Section>
           <Rating>
             {ratingArray.map((_, i) => (

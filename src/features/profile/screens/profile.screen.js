@@ -101,7 +101,7 @@ export const ProfileScreen = ({ navigation }) => {
         <List.Section>
           <ProfileContainer>
             <Spacer size="medium">
-              <Text>Olá {userDoc?.displayName}</Text>
+              <Text>Olá, {userDoc?.displayName}! Vai trocar o que hoje? </Text>
             </Spacer>
             <Spacer size="medium">
               <ProfileButton
@@ -125,6 +125,14 @@ export const ProfileScreen = ({ navigation }) => {
                 onPress={() => navigation.navigate("ProductsPage")}
               >
                 Buscar Produto/Serviço na Lista
+              </ProfileButton>
+            </Spacer>
+            <Spacer size="medium">
+              <ProfileButton
+                mode="contained"
+                onPress={() => navigation.navigate("ChatsScreen")}
+              >
+                Meus Chats
               </ProfileButton>
             </Spacer>
           </ProfileContainer>

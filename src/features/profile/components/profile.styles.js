@@ -13,7 +13,7 @@ export const ProfileBackground = styled.ImageBackground.attrs({
 
 export const ProfileContainer = styled.View`
   background-color: rgba(255, 255, 255, 0.7);
-  padding: ${(props) => props.theme.space[4]};
+  padding: ${(props) => props.theme.space[3]};
   margin-top: ${(props) => props.theme.space[2]};
 `;
 
@@ -24,7 +24,7 @@ export const ProfileButton = styled(Button).attrs({
 `;
 
 export const Title = styled(Text)`
-  font-size: 30px;
+  font-size: 40px;
 `;
 
 export const ProfileInput = styled(TextInput)`

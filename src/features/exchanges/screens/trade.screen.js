@@ -20,7 +20,7 @@ export const TradeScreen = ({ navigation }) => {
           <Spacer size="large">
             <TradeButton
               mode="contained"
-              onPress={() => navigation.navigate("ChatScreen")}
+              onPress={() => navigation.navigate("ChatsScreen")}
             >
               Ir para o Chat
             </TradeButton>

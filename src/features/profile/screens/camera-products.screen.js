@@ -15,7 +15,7 @@ const ProfileCamera = styled(Camera)`
   height: 100%;
 `;
 
-export const CameraScreen = ({ navigation }) => {
+export const CameraProductsScreen = ({ navigation }) => {
   const [hasPermission, setHasPermission] = useState(null);
   const cameraRef = useRef();
   const { user } = useContext(AuthenticationContext);
@@ -25,7 +25,7 @@ export const CameraScreen = ({ navigation }) => {
   const snap = async () => {
     if (cameraRef.current) {
       const { uri } = await cameraRef.current.takePictureAsync();
-      const storageRef = ref(storage, `perfil/${user.uid}`);
+      const storageRef = ref(storage, `imagesProducts/${user.uid}`);
       const uploadTask = uploadBytesResumable(storageRef, uri);
       uploadTask.on(
         "state_changed",
@@ -63,7 +63,7 @@ export const CameraScreen = ({ navigation }) => {
     <TouchableOpacity onPress={snap}>
       <ProfileCamera
         ref={(camera) => (cameraRef.current = camera)}
-        type={Camera.Constants.Type.front}
+        type={Camera.Constants.Type.back}
         ratio={"16:9"}
       />
     </TouchableOpacity>

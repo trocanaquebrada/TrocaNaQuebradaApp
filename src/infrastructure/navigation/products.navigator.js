@@ -10,6 +10,7 @@ import { ProductDetailScreen } from "../../features/products/screens/product-det
 import { TradeScreen } from "../../features/exchanges/screens/trade.screen";
 import { ChatsScreen } from "../../features/chat/screens/chats.screen";
 import { ChatScreen } from "../../features/chat/screens/chat.screen";
+import { CameraProductsScreen } from "../../features/profile/screens/camera-products.screen";
 
 const ProductStack = createStackNavigator();
 
@@ -25,6 +26,10 @@ export const ProductsNavigator = () => {
       <ProductStack.Screen
         name="ProductDetail"
         component={ProductDetailScreen}
+      />
+      <ProductStack.Screen
+        name="CameraProductsScreen"
+        component={CameraProductsScreen}
       />
       <ProductStack.Screen name="TradeScreen" component={TradeScreen} />
       <ProductStack.Screen name="ChatsScreen" component={ChatsScreen} />

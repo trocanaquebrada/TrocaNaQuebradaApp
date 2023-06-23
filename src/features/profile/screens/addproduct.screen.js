@@ -84,7 +84,9 @@ export const AddProductScreen = ({ navigation }) => {
     <ProfileBackground>
       <SafeArea>
         <ProductContainer>
-          <TouchableOpacity onPress={() => navigation.navigate("Camera")}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("CameraProductsScreen")}
+          >
             {!photo && (
               <Avatar.Icon size={180} icon="human" backgroundColor="#2182BD" />
             )}

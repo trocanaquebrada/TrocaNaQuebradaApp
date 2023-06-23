@@ -9,7 +9,7 @@ import { AuthenticationContext } from "../../../resources/authentication/authent
 import { storage } from "../../../utils/firebase/firebase.utils";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { onSnapshot, onSnapshotsInSync } from "firebase/firestore";
-
+import { Image } from "react-native";
 const ProfileCamera = styled(Camera)`
   width: 100%;
   height: 100%;
@@ -20,35 +20,29 @@ export const CameraScreen = ({ navigation }) => {
   const cameraRef = useRef();
   const { user } = useContext(AuthenticationContext);
   const [imgURL, setImgURL] = useState("");
-  const [progress, setProgress] = useState(0);
+  const [photoUri, setPhotoUri] = useState(null);
 
   const snap = async () => {
-    if (cameraRef) {
-      const photo = await cameraRef.current.takePictureAsync();
-      const storageRef = ref(storage, `imagesProducts/${photo.uri}`);
-      const uploadTask = uploadBytesResumable(storageRef, photo);
+    if (cameraRef.current) {
+      const { uri } = await cameraRef.current.takePictureAsync();
+      const storageRef = ref(storage, `imagesProducts/${user.uid}`);
+      const uploadTask = uploadBytesResumable(storageRef, uri);
       uploadTask.on(
         "state_changed",
-        (onSnapshotsInSync) => {
+        (snapshot) => {
           const progress = Math.round(
-            (onSnapshotsInSync.bytesTransferred /
-              onSnapshotsInSync.totalBytes) *
-              100
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
           );
-          setProgress(progress);
+          console.log(`Upload progress: ${progress}%`);
         },
         (error) => {
-          alert(error);
+          console.error("Error uploading photo:", error);
         },
-        () => {
-          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-            setImgURL(downloadURL);
-          });
+        async () => {
+          const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+          setPhotoUri(downloadURL);
         }
       );
-      //console.log(photo);
-      AsyncStorage.setItem(`${user.uid}-photo`, photo.uri);
-      navigation.goBack();
     }
   };
 

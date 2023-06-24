@@ -20,7 +20,7 @@ export const ProfileContainer = styled.View`
 export const ProfileButton = styled(Button).attrs({
   color: colors.brand.primary,
 })`
-  padding: ${(props) => props.theme.space[2]};
+  padding: ${(props) => props.theme.space[1]};
 `;
 
 export const Title = styled(Text)`

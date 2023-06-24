@@ -19,7 +19,7 @@ export const ProductCardCover = styled(Card.Cover)`
 export const ProductButton = styled(Button).attrs({
   color: colors.brand.primary,
 })`
-  padding: ${(props) => props.theme.space[2]};
+  padding: ${(props) => props.theme.space[1]};
 `;
 
 export const Address = styled.Text`

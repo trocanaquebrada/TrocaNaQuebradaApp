@@ -30,14 +30,17 @@ export const AppNavigator = () => (
   <LocationContextProvider>
     <ProductsContextProvider>
       <Tab.Navigator
-        screenOptions={
-          ({ headerMode: "none" },
-          { createScreenOptions },
-          {
-            tabBarActiveTintColor: "purple",
-            tabBarInactiveTintColor: "gray",
-          })
-        }
+        screenOptions={{
+          headerMode: "none",
+          headerShown: false,
+          createScreenOptions,
+          tabBarStyle: [
+            {
+              tabBarActiveTintColor: "purple",
+              tabBarInactiveTintColor: "gray",
+            },
+          ],
+        }}
       >
         <Tab.Screen name="Produtos" component={ProductsNavigator} />
         <Tab.Screen name="Localizacao" component={MapScreen} />

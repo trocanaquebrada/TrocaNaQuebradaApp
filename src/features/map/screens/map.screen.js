@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import MapView, { Marker } from "react-native-maps";
+import MapView, { Marker, Callout } from "react-native-maps";
 import styled from "styled-components";
 
 import { ProductsContext } from "../../../resources/products/products.context";
@@ -15,7 +15,7 @@ import {
   getDoc,
   collection,
 } from "firebase/firestore";
-
+import { StyleSheet, Image, Text } from "react-native";
 import {
   createUserDocumentFromAuth,
   getAuth,
@@ -26,13 +26,19 @@ const Map = styled(MapView)`
   height: 100%;
   width: 100%;
 `;
+const styles = StyleSheet.create({
+  Image: {
+    width: 40,
+    height: 40,
+  },
+});
 
 export const MapScreen = () => {
   const { location } = useContext(LocationContext);
   const { products = [] } = useContext(ProductsContext);
-
+  const [selectMarker, setSelectMarker] = useState("");
   const [latDeltaViewport, setLatDeltaViewport] = useState(0);
-
+  const [image, setImage] = useState("");
   const [mapRegion, setMapRegion] = useState(null);
   const [marker, setMarker] = useState([]);
 

@@ -31,7 +31,6 @@ export const TradeScreen = ({ navigation }) => {
       currentUser,
     });
   };
-  console.log("aqui");
   return (
     <TradeBackground>
       <SafeArea>

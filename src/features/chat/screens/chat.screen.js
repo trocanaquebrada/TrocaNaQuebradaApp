@@ -14,6 +14,8 @@ import {
 import { Colors } from "react-native/Libraries/NewAppScreen";
 
 import Balloon from "../components/balloon.component";
+import { ChatsScreen } from "./chats.screen";
+import ChatItem from "../components/chat-item.component";
 
 const KEYBOARD_AVOIDING_BEHAVIOR = Platform.select({
   ios: "padding",
@@ -64,7 +66,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const ChatScreen = ({ route }) => {
+export const ChatScreen = ({ route, navigation }) => {
   const [message, setMessage] = useState("");
   const chat = route.params.chat;
   const currentUser = route.params.currentUser;

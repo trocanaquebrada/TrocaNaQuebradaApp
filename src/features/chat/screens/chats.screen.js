@@ -61,6 +61,18 @@ const styles = StyleSheet.create({
 });
 
 export const ChatsScreen = ({ navigation }) => {
+  const handleChatPress = (chatId) => {
+    const chat = chatsMock.find((chat) => chat.id === chatId);
+    if (chat) {
+      navigation.navigate("ChatScreen", {
+        chat: {
+          ...chat,
+          messages: [], // Array vazio para as mensagens
+        },
+        currentUser,
+      });
+    }
+  };
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Chats</Text>
@@ -70,6 +82,7 @@ export const ChatsScreen = ({ navigation }) => {
           key={chat.id}
           currentUser={currentUser}
           navigation={navigation}
+          onPress={() => handleChatPress(chat.id)}
         />
       ))}
     </SafeAreaView>

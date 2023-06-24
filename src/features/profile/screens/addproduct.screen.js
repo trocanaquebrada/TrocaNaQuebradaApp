@@ -101,11 +101,11 @@ export const AddProductScreen = ({ navigation }) => {
         </ProductContainer>
         <ProfileContainer>
           <Spacer size="medium">
-            <Text> Cadastrar Produto: </Text>
+            <Text> O que vc quer compartilhar? </Text>
           </Spacer>
           <Spacer size="small">
             <ProfileInput
-              label="Nome Produto"
+              label="Nome"
               value={nameProduct}
               textContentType="name"
               keyboardType="default"
@@ -115,7 +115,7 @@ export const AddProductScreen = ({ navigation }) => {
           </Spacer>
           <Spacer size="small">
             <ProfileInput
-              label="Descricao"
+              label="Fale mais sobre..."
               value={infoProduct}
               textContentType="name"
               keyboardType="default"
@@ -125,7 +125,17 @@ export const AddProductScreen = ({ navigation }) => {
           </Spacer>
           <Spacer size="small">
             <ProfileInput
-              label="Valor"
+              label="Aceita troca? Pelo o que?"
+              value={value}
+              textContentType="name"
+              keyboardType="default"
+              autoCapitalize="words"
+              onChangeText={(val) => setValue(val)}
+            />
+          </Spacer>
+          <Spacer size="small">
+            <ProfileInput
+              label="Aceita dinheiro? Quanto?"
               value={value}
               textContentType="name"
               keyboardType="default"

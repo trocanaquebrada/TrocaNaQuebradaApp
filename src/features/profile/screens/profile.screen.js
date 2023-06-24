@@ -81,23 +81,30 @@ export const ProfileScreen = ({ navigation }) => {
   return (
     <ProfileBackground>
       <SafeArea>
-        <AvatarContainer>
-          <TouchableOpacity onPress={() => navigation.navigate("Camera")}>
-            {!photo && (
-              <Avatar.Icon size={180} icon="human" backgroundColor="#2182BD" />
-            )}
-            {photo && (
-              <Avatar.Image
-                size={180}
-                source={{ uri: photo }}
-                backgroundColor="#2182BD"
-              />
-            )}
-          </TouchableOpacity>
-          <Spacer position="top" size="large">
-            <Text variant="label">{userDoc?.email}</Text>
-          </Spacer>
-        </AvatarContainer>
+        <Spacer size="extralarge">
+          <AvatarContainer>
+            <TouchableOpacity onPress={() => navigation.navigate("Camera")}>
+              {!photo && (
+                <Avatar.Icon
+                  size={180}
+                  icon="human"
+                  backgroundColor="#2182BD"
+                />
+              )}
+              {photo && (
+                <Avatar.Image
+                  size={180}
+                  source={{ uri: photo }}
+                  backgroundColor="#2182BD"
+                />
+              )}
+            </TouchableOpacity>
+            <Spacer position="top" size="extralarge">
+              <Text variant="label">{userDoc?.email}</Text>
+            </Spacer>
+          </AvatarContainer>
+        </Spacer>
+
         <List.Section>
           <ProfileContainer>
             <Spacer size="medium">

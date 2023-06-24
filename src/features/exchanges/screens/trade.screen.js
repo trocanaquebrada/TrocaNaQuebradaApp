@@ -10,6 +10,27 @@ import {
 import { Spacer } from "../../../components/spacer/spacer.component";
 
 export const TradeScreen = ({ navigation }) => {
+  const currentUser = 32;
+  const handleGoToChat = () => {
+    const chat = {
+      id: 3, // ID do chat desejado
+      users: [
+        {
+          id: 32,
+          phone: "+5511999882323",
+        },
+        {
+          id: 99,
+          phone: "+5532988882222",
+        },
+      ],
+      messages: [], // Array vazio para as mensagens
+    };
+    navigation.navigate("ChatScreen", {
+      ...chat,
+      currentUser,
+    });
+  };
   return (
     <TradeBackground>
       <SafeArea>
@@ -20,7 +41,7 @@ export const TradeScreen = ({ navigation }) => {
           <Spacer size="large">
             <TradeButton
               mode="contained"
-              onPress={() => navigation.navigate("ChatsScreen")}
+              onPress={handleGoToChat} // Utilize a função handleGoToChat para navegar para a tela ChatScreen
             >
               Ir para o Chat
             </TradeButton>

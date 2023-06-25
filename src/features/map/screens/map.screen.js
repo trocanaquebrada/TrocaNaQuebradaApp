@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const MapScreen = () => {
+export const MapScreen = ({ navigation }) => {
   const { location } = useContext(LocationContext);
   const { products = [] } = useContext(ProductsContext);
   const [selectMarker, setSelectMarker] = useState("");
@@ -114,6 +114,11 @@ export const MapScreen = () => {
         {marker.map((m) => {
           return (
             <Marker
+              onMarkerPress={() =>
+                navigation.navigate("ProductDetail", {
+                  product: products.item,
+                })
+              }
               title={m.name}
               coordinate={{
                 latitude: m.latitude,

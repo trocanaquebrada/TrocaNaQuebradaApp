@@ -22,6 +22,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import styled from "styled-components";
 import { createUserDocumentFromAuth, getAuth } from "firebase/auth";
 import { TouchableOpacity } from "react-native";
+import { CameraProductsScreen } from "./camera-products.screen";
 
 const ProductContainer = styled.View`
   align-items: center;
@@ -49,8 +50,6 @@ export const AddProductScreen = ({ navigation }) => {
     //da a opção de troca, add a camera salva a foto
     try {
       const docRef = await getDoc(doc(db, "users", userRef));
-      const photoUri = await AsyncStorage.getItem(`${docRef}-photo`);
-      setPhoto(photoUri);
 
       const createdAt = new Date();
       const productData = {

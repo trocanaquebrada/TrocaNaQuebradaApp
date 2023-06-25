@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from "react";
-import MapView, { Marker, Callout } from "react-native-maps";
 import styled from "styled-components";
 
 import { ProductsContext } from "../../../resources/products/products.context";
@@ -36,7 +35,7 @@ const styles = StyleSheet.create({
 export const MapScreen = ({ navigation }) => {
   const { location } = useContext(LocationContext);
   const { products = [] } = useContext(ProductsContext);
-  const [selectMarker, setSelectMarker] = useState("");
+
   const [latDeltaViewport, setLatDeltaViewport] = useState(0);
   const [image, setImage] = useState("");
   const [mapRegion, setMapRegion] = useState(null);

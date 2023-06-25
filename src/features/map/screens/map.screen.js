@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import MapView, { Marker } from "react-native-maps";
+import { TouchableOpacity } from "react-native-gesture-handler";
 import styled from "styled-components";
 
 import { ProductsContext } from "../../../resources/products/products.context";
@@ -27,10 +28,9 @@ const Map = styled(MapView)`
   width: 100%;
 `;
 
-export const MapScreen = () => {
+export const MapScreen = ({ navigation, route }) => {
   const { location } = useContext(LocationContext);
   const { products = [] } = useContext(ProductsContext);
-
   const [latDeltaViewport, setLatDeltaViewport] = useState(0);
 
   const [mapRegion, setMapRegion] = useState(null);
@@ -108,6 +108,11 @@ export const MapScreen = () => {
         {marker.map((m) => {
           return (
             <Marker
+              onMarkerPress={() =>
+                navigation.navigate("ProductDetail", {
+                  product: products.item,
+                })
+              }
               title={m.name}
               coordinate={{
                 latitude: m.latitude,

@@ -1,6 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons } from "@expo/vector-icons";
+//import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 import { ProductsNavigator } from "./products.navigator";
 import { MapScreen } from "../../features/map/screens/map.screen";
@@ -12,7 +13,7 @@ import { LocationContextProvider } from "../../resources/location/location.conte
 const Tab = createBottomTabNavigator();
 
 const TAB_ICON = {
-  Produtos: "md-list-sharp",
+  Produtos: "md-list",
   Localizacao: "md-map",
   Perfil: "md-settings",
 };

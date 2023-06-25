@@ -83,22 +83,29 @@ export const AddProductScreen = ({ navigation }) => {
   return (
     <ProfileBackground>
       <SafeArea>
-        <ProductContainer>
-          <TouchableOpacity
-            onPress={() => navigation.navigate("CameraProductsScreen")}
-          >
-            {!photo && (
-              <Avatar.Icon size={180} icon="human" backgroundColor="#2182BD" />
-            )}
-            {photo && (
-              <Avatar.Image
-                size={180}
-                source={{ uri: photo }}
-                backgroundColor="#2182BD"
-              />
-            )}
-          </TouchableOpacity>
-        </ProductContainer>
+        <Spacer size="extralarge">
+          <ProductContainer>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("CameraProductsScreen")}
+            >
+              {!photo && (
+                <Avatar.Icon
+                  size={180}
+                  icon="folder"
+                  backgroundColor="#2182BD"
+                />
+              )}
+              {photo && (
+                <Avatar.Image
+                  size={180}
+                  source={{ uri: photo }}
+                  backgroundColor="#2182BD"
+                />
+              )}
+            </TouchableOpacity>
+          </ProductContainer>
+        </Spacer>
+
         <ProfileContainer>
           <Spacer size="medium">
             <Text> O que vc quer compartilhar? </Text>

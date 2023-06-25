@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from "react";
-import MapView, { Marker, Callout } from "react-native-maps";
 import styled from "styled-components";
 
 import { ProductsContext } from "../../../resources/products/products.context";
@@ -33,10 +32,10 @@ const styles = StyleSheet.create({
   },
 });
 
-export const MapScreen = () => {
+export const MapScreen = ({ navigation, route }) => {
   const { location } = useContext(LocationContext);
   const { products = [] } = useContext(ProductsContext);
-  const [selectMarker, setSelectMarker] = useState("");
+
   const [latDeltaViewport, setLatDeltaViewport] = useState(0);
   const [image, setImage] = useState("");
   const [mapRegion, setMapRegion] = useState(null);
@@ -114,6 +113,11 @@ export const MapScreen = () => {
         {marker.map((m) => {
           return (
             <Marker
+              onMarkerPress={() =>
+                navigation.navigate("ProductDetail", {
+                  product: products.item,
+                })
+              }
               title={m.name}
               coordinate={{
                 latitude: m.latitude,

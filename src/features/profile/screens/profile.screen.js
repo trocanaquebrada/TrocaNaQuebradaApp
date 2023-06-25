@@ -73,7 +73,7 @@ export const ProfileScreen = ({ navigation }) => {
                 />
               )}
             </TouchableOpacity>
-            <Spacer position="top" size="extralarge">
+            <Spacer position="top" size="large">
               <Text variant="label">{userDoc?.email}</Text>
             </Spacer>
           </AvatarContainer>

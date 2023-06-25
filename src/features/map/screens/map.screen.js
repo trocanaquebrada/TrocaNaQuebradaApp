@@ -20,6 +20,8 @@ import {
   getAuth,
   onAuthStateChanged,
 } from "firebase/auth";
+import MapView from "react-native-maps";
+import { Marker } from "react-native-svg";
 
 const Map = styled(MapView)`
   height: 100%;

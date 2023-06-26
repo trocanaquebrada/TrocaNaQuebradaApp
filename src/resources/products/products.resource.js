@@ -15,7 +15,7 @@ export const productsRequest = async () => {
   const productCollectionRef = collection(db, "Product");
   const productsCollection = await getDocs(productCollectionRef);
   const productsData = productsCollection.docs.map((doc) => {
-    const { nameProduct, lat, lng, userRef, placeId, address, photos, value } =
+    const { nameProduct, lat, lng, userRef, placeId, address, photo, value } =
       doc.data();
     return {
       name: nameProduct || "",
@@ -25,7 +25,7 @@ export const productsRequest = async () => {
       longitude: lng || "",
       ref: userRef || "",
       placeId: doc.id || "",
-      photos: photos || ["https://picsum.photos/300/300"],
+      photos: photo || ["https://picsum.photos/300/300"],
     };
   });
   const auth = getAuth();

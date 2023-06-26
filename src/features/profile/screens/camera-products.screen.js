@@ -10,7 +10,15 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import * as ImagePicker from "expo-image-picker";
 import { ProfileButton } from "../components/profile.styles";
 import { Image, View, Platform } from "react-native";
-import { doc, getDoc, getFirestore } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  getFirestore,
+  setDoc,
+} from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const ProfileCamera = styled(Camera)`
@@ -46,7 +54,7 @@ export const CameraProductsScreen = ({ navigation }) => {
     });
 
     if (!result.canceled) {
-      setField(result.assets[0].base64);
+      setField(result.base64);
     }
   };
   const pickImage = async () => {
@@ -58,51 +66,21 @@ export const CameraProductsScreen = ({ navigation }) => {
     });
 
     if (!result.canceled) {
-      setImage(result.assets[0].base64);
+      setImage(result.base64);
     }
   };
-  const selectImage = () => {
-    if (image) {
-      setImageSelect(image);
-    } else {
-      setImageSelect(field);
-    }
-  };
-  console.log(imageSelect);
 
-  /*   const db = getFirestore();
-  const auth = getAuth();
   const onSaveImageProduct = async () => {
-    const userRef = auth.currentUser.uid;
-    try {
-      const docRef = await getDoc(doc(db, "users", userRef));
-      const photoUri = await AsyncStorage.getItem(`${docRef}-photo`);
-      setPhoto(photoUri);
-
-      const productData = {
-        userRef,
-        nameProduct,
-        infoProduct,
-        value,
-        ...getLocUser,
-        createdAt,
-      };
-
-      if (productData.nameProduct === "" || productData.infoProduct === "") {
-        console.log("Por favor, preencha todos os campos do produto");
-      } else {
-        await addDoc(collection(db, "Product"), productData);
-        await createUserDocumentFromAuth(productData);
-        console.log("produto criado com sucesso");
-        setProductData(productData);
-      }
-
-      setProductData();
-    } catch (e) {
-      setIsLoading(false);
-      setError(e.toString("Erro ao criar o produto"));
+    if (!image) {
+      setImageSelect(field);
+    } else {
+      setImageSelect(image);
     }
-  }; */
+
+    const photoUri = imageSelect;
+
+    navigation.navigate("AddProductScreen", { selectedImage: photoUri });
+  };
   return (
     <View
       style={{
@@ -113,13 +91,13 @@ export const CameraProductsScreen = ({ navigation }) => {
     >
       {image && (
         <Image
-          source={{ uri: image }}
+          source={{ uri: "data:image/jpeg;base64," + image }}
           style={{ flex: 0.5, width: 200, height: 200 }}
         />
       )}
       {field && (
         <Image
-          source={{ uri: field }}
+          source={{ uri: "data:image/jpeg;base64," + field }}
           style={{ flex: 0.5, width: 200, height: 200 }}
         />
       )}
@@ -139,7 +117,7 @@ export const CameraProductsScreen = ({ navigation }) => {
         icon="camera"
         mode="contained"
         title="Pick an image from camera roll"
-        onPress={selectImage}
+        onPress={onSaveImageProduct}
       />
     </View>
   );

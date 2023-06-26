@@ -113,7 +113,7 @@ export const CameraProductsScreen = ({ navigation }) => {
         icon="camera"
         mode="contained"
         title="Pick an image from camera roll"
-        onPress={onSaveImageProduct}
+        onPress={() => onSaveImageProduct}
       />
     </View>
   );

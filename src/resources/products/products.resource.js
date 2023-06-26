@@ -25,7 +25,7 @@ export const productsRequest = async () => {
       longitude: lng || "",
       ref: userRef || "",
       placeId: doc.id || "",
-      photos: photo || ["https://picsum.photos/300/300"],
+      photos: photo || "",
     };
   });
   const auth = getAuth();

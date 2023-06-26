@@ -2,6 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 //import { Ionicons } from "@expo/vector-icons";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { colors } from "../theme/colors";
 
 import { ProductsNavigator } from "./products.navigator";
 import { MapScreen } from "../../features/map/screens/map.screen";
@@ -13,7 +14,7 @@ import { LocationContextProvider } from "../../resources/location/location.conte
 const Tab = createBottomTabNavigator();
 
 const TAB_ICON = {
-  Produtos: "md-list",
+  Produtos: ["md-list", 24, "black"],
   Localizacao: "md-map",
   Perfil: "md-settings",
 };
@@ -24,6 +25,8 @@ const createScreenOptions = ({ route }) => {
     tabBarIcon: ({ size, color }) => (
       <Ionicons name={iconName} size={size} color={color} />
     ),
+    tabBarActiveTintColor: colors.ui.primary,
+    tabBarInactiveTintColor: colors.ui.secondary,
   };
 };
 
@@ -34,18 +37,36 @@ export const AppNavigator = () => (
         screenOptions={{
           headerMode: "none",
           headerShown: false,
-          createScreenOptions,
-          tabBarStyle: [
-            {
-              tabBarActiveTintColor: "purple",
-              tabBarInactiveTintColor: "gray",
-            },
-          ],
+          BottomTabNavigationOptions: createScreenOptions,
         }}
       >
-        <Tab.Screen name="Produtos" component={ProductsNavigator} />
-        <Tab.Screen name="Localizacao" component={MapScreen} />
-        <Tab.Screen name="Perfil" component={ProfileNavigator} />
+        <Tab.Screen
+          name="Produtos"
+          component={ProductsNavigator}
+          options={{
+            tabBarIcon: () => (
+              <Ionicons name="list" color={"purple"} size={26} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Localizacao"
+          component={MapScreen}
+          options={{
+            tabBarIcon: () => (
+              <Ionicons name="map" color={"purple"} size={26} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Perfil"
+          component={ProfileNavigator}
+          options={{
+            tabBarIcon: () => (
+              <Ionicons name="body" color={"purple"} size={26} />
+            ),
+          }}
+        />
       </Tab.Navigator>
     </ProductsContextProvider>
   </LocationContextProvider>

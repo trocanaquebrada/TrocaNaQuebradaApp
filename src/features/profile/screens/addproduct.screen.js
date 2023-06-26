@@ -92,17 +92,17 @@ export const AddProductScreen = ({ route, navigation }) => {
             <TouchableOpacity
               onPress={() => navigation.navigate("CameraProductsScreen")}
             >
-              {!selectedImage && (
-                <Avatar.Icon
-                  size={180}
-                  icon="folder"
-                  backgroundColor="#2182BD"
-                />
-              )}
               {selectedImage && (
                 <Avatar.Image
                   size={180}
                   source={{ uri: "data:image/jpeg;base64," + selectedImage }}
+                  backgroundColor="#2182BD"
+                />
+              )}
+              {!selectedImage && (
+                <Avatar.Icon
+                  size={180}
+                  icon="folder"
                   backgroundColor="#2182BD"
                 />
               )}
@@ -159,7 +159,9 @@ export const AddProductScreen = ({ route, navigation }) => {
               <AuthButton
                 icon="email"
                 mode="contained"
-                onPress={() => onSaveProduct()}
+                onPress={() =>
+                  onSaveProduct(navigation.goBack("ProfileScreen"))
+                }
               >
                 Cadastrar
               </AuthButton>

@@ -115,11 +115,11 @@ export const MapScreen = ({ navigation }) => {
         {marker.map((m) => {
           return (
             <Marker
-              onMarkerPress={() =>
+              /* onMarkerPress={() =>
                 navigation.navigate("ProductDetail", {
                   product: products.item,
                 })
-              }
+              } */
               title={m.name}
               coordinate={{
                 latitude: m.latitude,

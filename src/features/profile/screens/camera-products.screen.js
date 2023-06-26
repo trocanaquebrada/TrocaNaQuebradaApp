@@ -126,7 +126,9 @@ export const CameraProductsScreen = ({ navigation }) => {
           icon="camera"
           mode="contained"
           title="Salve image"
-          onPress={onSaveImageProduct}
+          onPress={() =>
+            onSaveImageProduct(navigation.goBack("AddProductScreen"))
+          }
         >
           Salvar Imagem
         </ProfileButton>

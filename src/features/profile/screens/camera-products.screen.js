@@ -1,16 +1,10 @@
-import React, { useRef, useState, useEffect, useContext } from "react";
-import { Camera, requestCameraPermissionsAsync } from "expo-camera";
+import React, { useRef, useState, useEffect } from "react";
+import { Camera } from "expo-camera";
 import styled from "styled-components";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import { Text } from "../../../components/typography/text.component";
-import { Spacer } from "../../../components/spacer/spacer.component";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { AuthenticationContext } from "../../../resources/authentication/authentication.context";
-import { storage } from "../../../utils/firebase/firebase.utils";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import * as ImagePicker from "expo-image-picker";
 import { ProfileButton } from "../components/profile.styles";
-import { Image, View, Platform } from "react-native";
+import { Image, View } from "react-native";
 import {
   addDoc,
   collection,
@@ -20,7 +14,6 @@ import {
   getFirestore,
   setDoc,
 } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
 
 const ProfileCamera = styled(Camera)`
   width: 100%;

@@ -3,6 +3,7 @@ import { Camera, requestCameraPermissionsAsync } from "expo-camera";
 import styled from "styled-components";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Text } from "../../../components/typography/text.component";
+import { Spacer } from "../../../components/spacer/spacer.component";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { AuthenticationContext } from "../../../resources/authentication/authentication.context";
 import { storage } from "../../../utils/firebase/firebase.utils";
@@ -89,6 +90,8 @@ export const CameraProductsScreen = ({ navigation }) => {
         justifyContent: "center",
       }}
     >
+      <Text> Mostre o que vc quer trocar </Text>
+
       {image && (
         <Image
           source={{ uri: "data:image/jpeg;base64," + image }}

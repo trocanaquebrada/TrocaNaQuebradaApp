@@ -14,6 +14,7 @@ import {
   getFirestore,
   setDoc,
 } from "firebase/firestore";
+import { Spacer } from "../../../components/spacer/spacer.component";
 
 const ProfileCamera = styled(Camera)`
   width: 100%;
@@ -97,24 +98,39 @@ export const CameraProductsScreen = ({ navigation }) => {
           style={{ flex: 0.5, width: 200, height: 200 }}
         />
       )}
-      <ProfileButton
-        icon="camera"
-        mode="contained"
-        title="Pick an image from camera roll"
-        onPress={pickImage}
-      />
-      <ProfileButton
-        title="tirar foto"
-        onPress={snap}
-        icon="camera"
-        mode="contained"
-      />
-      <ProfileButton
-        icon="camera"
-        mode="contained"
-        title="Pick an image from camera roll"
-        onPress={() => onSaveImageProduct}
-      />
+
+      <Spacer size="large">
+        <ProfileButton
+          icon="camera"
+          mode="contained"
+          title="Pick an image from camera roll"
+          onPress={pickImage}
+        >
+          Selecionar foto da Galeria
+        </ProfileButton>
+      </Spacer>
+
+      <Spacer size="large">
+        <ProfileButton
+          title="tirar foto"
+          onPress={snap}
+          icon="camera"
+          mode="contained"
+        >
+          Abrir a Camera
+        </ProfileButton>
+      </Spacer>
+
+      <Spacer size="large">
+        <ProfileButton
+          icon="camera"
+          mode="contained"
+          title="Salve image"
+          onPress={onSaveImageProduct}
+        >
+          Salvar Imagem
+        </ProfileButton>
+      </Spacer>
     </View>
   );
 };

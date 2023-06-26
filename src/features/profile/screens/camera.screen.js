@@ -70,6 +70,18 @@ export const CameraScreen = ({ navigation }) => {
     }
   };
 
+  const onSaveImageProduct = async () => {
+    if (!image) {
+      setImageSelect(field);
+    } else {
+      setImageSelect(image);
+    }
+
+    const photoUri = imageSelect;
+
+    navigation.navigate("AddProductScreen", { selectedImage: photoUri });
+  };
+
   return (
     <View
       style={{
@@ -107,6 +119,17 @@ export const CameraScreen = ({ navigation }) => {
           mode="contained"
         >
           Tirar Foto
+        </ProfileButton>
+      </Spacer>
+
+      <Spacer size="large">
+        <ProfileButton
+          icon="camera"
+          mode="contained"
+          title="Salve image"
+          onPress={onSaveImageProduct}
+        >
+          Salvar Imagem
         </ProfileButton>
       </Spacer>
     </View>

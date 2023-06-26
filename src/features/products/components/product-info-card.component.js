@@ -33,7 +33,10 @@ export const ProductInfoCard = ({ product = {} }) => {
   const ratingArray = Array.from(new Array(Math.floor(rating)));
   return (
     <ProductCard elevation={5}>
-      <ProductCardCover key={placeId.id} source={{ uri: photos[0] }} />
+      <ProductCardCover
+        key={placeId.id}
+        source={{ uri: "data:image/jpeg;base64," + photos }}
+      />
       <Info>
         <Text variant="label">{name}</Text>
         <Text variant="label">{value}</Text>

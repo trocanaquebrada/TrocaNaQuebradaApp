@@ -47,7 +47,6 @@ export const CameraScreen = ({ navigation }) => {
       base64: true,
       aspect: [4, 3],
       quality: 0.2,
-      //base64: true,
     });
 
     //console.log(result);

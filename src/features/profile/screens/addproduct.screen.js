@@ -27,7 +27,7 @@ import { CameraProductsScreen } from "./camera-products.screen";
 const ProductContainer = styled.View`
   align-items: center;
 `;
-export const AddProductScreen = ({ navigation }) => {
+export const AddProductScreen = ({ route, navigation }) => {
   const [value, setValue] = useState(null);
   const [error, setError] = useState(null);
   const [nameProduct, setNameProduct] = useState("");
@@ -36,6 +36,7 @@ export const AddProductScreen = ({ navigation }) => {
   const [setIsLoading] = useState(false);
   const [setProductData] = useState(null);
   const [photo, setPhoto] = useState(null);
+  const { selectedImage } = route.params || {};
 
   const db = getFirestore();
   const auth = getAuth();
@@ -47,12 +48,14 @@ export const AddProductScreen = ({ navigation }) => {
       lat: userDoc.data().lat,
       lng: userDoc.data().lng,
     };
+    console.log("selectedImage");
     //da a opção de troca, add a camera salva a foto
     try {
       const docRef = await getDoc(doc(db, "users", userRef));
 
       const createdAt = new Date();
       const productData = {
+        photo: selectedImage,
         userRef,
         nameProduct,
         infoProduct,
@@ -87,17 +90,17 @@ export const AddProductScreen = ({ navigation }) => {
             <TouchableOpacity
               onPress={() => navigation.navigate("CameraProductsScreen")}
             >
-              {!photo && (
+              {!selectedImage && (
                 <Avatar.Icon
                   size={180}
                   icon="folder"
                   backgroundColor="#2182BD"
                 />
               )}
-              {photo && (
+              {selectedImage && (
                 <Avatar.Image
                   size={180}
-                  source={{ uri: photo }}
+                  source={{ uri: "data:image/jpeg;base64," + selectedImage }}
                   backgroundColor="#2182BD"
                 />
               )}

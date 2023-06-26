@@ -25,6 +25,7 @@ export const CameraScreen = ({ navigation }) => {
   const [image, setImage] = useState(null);
   const [hasPermission, setHasPermission] = useState(null);
   const [field, setField] = useState(null);
+  const [imageSelect, setImageSelect] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -77,9 +78,9 @@ export const CameraScreen = ({ navigation }) => {
       setImageSelect(image);
     }
 
-    const photoUri = imageSelect;
+    //const photoUri = imageSelect;
 
-    navigation.navigate("AddProductScreen", { selectedImage: photoUri });
+    //navigation.navigate("AddProductScreen", { selectedImage: photoUri });
   };
 
   return (

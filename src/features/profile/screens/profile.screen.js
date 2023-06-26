@@ -89,7 +89,7 @@ export const ProfileScreen = ({ navigation }) => {
                 mode="contained"
                 onPress={() => navigation.navigate("AddProductScreen")}
               >
-                Cadastrar Produto/Serviço
+                Cadastrar o que vc quer trocar
               </ProfileButton>
             </Spacer>
             <Spacer size="medium">
@@ -97,7 +97,7 @@ export const ProfileScreen = ({ navigation }) => {
                 mode="contained"
                 onPress={() => navigation.navigate("Localizacao")}
               >
-                Buscar Produto/Serviço no Mapa
+                Buscar algo pra trocar no Mapa
               </ProfileButton>
             </Spacer>
             <Spacer size="medium">
@@ -105,7 +105,7 @@ export const ProfileScreen = ({ navigation }) => {
                 mode="contained"
                 onPress={() => navigation.navigate("ProductsPage")}
               >
-                Buscar Produto/Serviço na Lista
+                Buscar algo pra trocar na Lista
               </ProfileButton>
             </Spacer>
             <Spacer size="medium">
@@ -113,13 +113,13 @@ export const ProfileScreen = ({ navigation }) => {
                 mode="contained"
                 onPress={() => navigation.navigate("ChatsScreen")}
               >
-                Meus Chats
+                Minhas Conversas
               </ProfileButton>
             </Spacer>
           </ProfileContainer>
 
           <ProfileItem
-            title="Sair"
+            title="Sair da Conta"
             left={(props) => <List.Icon {...props} color="black" icon="door" />}
             onPress={onLogout}
           />

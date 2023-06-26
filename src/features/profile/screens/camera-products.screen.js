@@ -3,6 +3,7 @@ import { Camera, requestCameraPermissionsAsync } from "expo-camera";
 import styled from "styled-components";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Text } from "../../../components/typography/text.component";
+import { Spacer } from "../../../components/spacer/spacer.component";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { AuthenticationContext } from "../../../resources/authentication/authentication.context";
 import { storage } from "../../../utils/firebase/firebase.utils";
@@ -111,36 +112,42 @@ export const CameraProductsScreen = ({ navigation }) => {
         justifyContent: "center",
       }}
     >
+      <Text> Mostre o que vc quer trocar </Text>
+
       {image && (
         <Image
           source={{ uri: image }}
-          style={{ flex: 0.5, width: 200, height: 200 }}
+          style={{ flex: 0.5, width: 250, height: 250 }}
         />
       )}
       {field && (
         <Image
           source={{ uri: field }}
-          style={{ flex: 0.5, width: 200, height: 200 }}
+          style={{ flex: 0.5, width: 250, height: 250 }}
         />
       )}
-      <ProfileButton
-        icon="camera"
-        mode="contained"
-        title="Pick an image from camera roll"
-        onPress={pickImage}
-      />
-      <ProfileButton
-        title="tirar foto"
-        onPress={snap}
-        icon="camera"
-        mode="contained"
-      />
-      <ProfileButton
-        icon="camera"
-        mode="contained"
-        title="Pick an image from camera roll"
-        onPress={selectImage}
-      />
+
+      <Spacer size="large">
+        <ProfileButton
+          icon="camera"
+          mode="contained"
+          title="Pick an image from camera roll"
+          onPress={pickImage}
+        >
+          Selecionar da Galeria
+        </ProfileButton>
+      </Spacer>
+
+      <Spacer size="large">
+        <ProfileButton
+          title="tirar foto"
+          onPress={snap}
+          icon="camera"
+          mode="contained"
+        >
+          Tirar Foto
+        </ProfileButton>
+      </Spacer>
     </View>
   );
 };

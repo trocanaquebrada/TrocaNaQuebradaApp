@@ -3,6 +3,7 @@ import { Camera, requestCameraPermissionsAsync } from "expo-camera";
 import styled from "styled-components";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Text } from "../../../components/typography/text.component";
+import { Spacer } from "../../../components/spacer/spacer.component";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { AuthenticationContext } from "../../../resources/authentication/authentication.context";
 import { storage } from "../../../utils/firebase/firebase.utils";
@@ -13,7 +14,6 @@ import { StyleSheet } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import { Ionicons } from "@expo/vector-icons";
 import { ProfileButton } from "../components/profile.styles";
-import { Spacer } from "../../../components/spacer/spacer.component";
 import { Button } from "react-native-paper";
 import { Image, View, Platform } from "react-native";
 
@@ -79,24 +79,37 @@ export const CameraScreen = ({ navigation }) => {
         justifyContent: "center",
       }}
     >
-      <ProfileButton
-        icon="camera"
-        mode="contained"
-        title="Pick an image from camera roll"
-        onPress={pickImage}
-      />
+      <Text> Personalize seu Perfil </Text>
+
       {image && (
-        <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />
+        <Image source={{ uri: image }} style={{ width: 250, height: 250 }} />
       )}
-      <ProfileButton
-        title="tirar foto"
-        onPress={snap}
-        icon="camera"
-        mode="contained"
-      />
+
       {field && (
-        <Image source={{ uri: field }} style={{ width: 200, height: 200 }} />
+        <Image source={{ uri: field }} style={{ width: 250, height: 250 }} />
       )}
+
+      <Spacer size="large">
+        <ProfileButton
+          icon="camera"
+          mode="contained"
+          title="Pick an image from camera roll"
+          onPress={pickImage}
+        >
+          Selecionar da Galeria
+        </ProfileButton>
+      </Spacer>
+
+      <Spacer size="large">
+        <ProfileButton
+          title="tirar foto"
+          onPress={snap}
+          icon="camera"
+          mode="contained"
+        >
+          Tirar Foto
+        </ProfileButton>
+      </Spacer>
     </View>
   );
 };

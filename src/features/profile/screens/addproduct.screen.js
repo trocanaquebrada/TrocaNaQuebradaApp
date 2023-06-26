@@ -29,6 +29,7 @@ const ProductContainer = styled.View`
 `;
 export const AddProductScreen = ({ route, navigation }) => {
   const [value, setValue] = useState(null);
+  const [trade, setTrade] = useState(null);
   const [error, setError] = useState(null);
   const [nameProduct, setNameProduct] = useState("");
   const [infoProduct, setInfoProduct] = useState("");
@@ -59,6 +60,7 @@ export const AddProductScreen = ({ route, navigation }) => {
         userRef,
         nameProduct,
         infoProduct,
+        trade,
         value,
         ...getLocUser,
         createdAt,
@@ -135,7 +137,7 @@ export const AddProductScreen = ({ route, navigation }) => {
           <Spacer size="small">
             <ProfileInput
               label="Aceita troca? Pelo o que?"
-              value={value}
+              value={trade}
               textContentType="name"
               keyboardType="default"
               autoCapitalize="words"

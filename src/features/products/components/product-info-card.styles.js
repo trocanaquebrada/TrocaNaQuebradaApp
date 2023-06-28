@@ -13,11 +13,11 @@ export const ProductCard = styled(Card)`
 
 export const ProductCardCover = styled(Card.Cover)`
   padding: ${(props) => props.theme.space[3]};
-  background-color: ${(props) => props.theme.colors.bg.primary};
+  background-color: ${(props) => props.theme.colors.bg.secondary};
 `;
 
 export const ProductButton = styled(Button).attrs({
-  color: colors.brand.primary,
+  color: colors.bg.secondary,
 })`
   padding: ${(props) => props.theme.space[1]};
 `;

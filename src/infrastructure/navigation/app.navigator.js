@@ -45,7 +45,7 @@ export const AppNavigator = () => (
           component={ProductsNavigator}
           options={{
             tabBarIcon: () => (
-              <Ionicons name="list" color={"purple"} size={26} />
+              <Ionicons name="list" color={colors.bg.secondary} size={26} />
             ),
           }}
         />
@@ -54,7 +54,7 @@ export const AppNavigator = () => (
           component={MapScreen}
           options={{
             tabBarIcon: () => (
-              <Ionicons name="map" color={"purple"} size={26} />
+              <Ionicons name="map" color={colors.bg.secondary} size={26} />
             ),
           }}
         />
@@ -63,7 +63,7 @@ export const AppNavigator = () => (
           component={ProfileNavigator}
           options={{
             tabBarIcon: () => (
-              <Ionicons name="body" color={"purple"} size={26} />
+              <Ionicons name="body" color={colors.bg.secondary} size={26} />
             ),
           }}
         />

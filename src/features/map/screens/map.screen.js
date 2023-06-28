@@ -40,7 +40,7 @@ export const MapScreen = ({ navigation }) => {
 
   const [latDeltaViewport, setLatDeltaViewport] = useState(0);
   const [image, setImage] = useState("");
-  const [mapRegion, setMapRegion] = useState(null);
+  const [mapRegion, setMapRegion] = useState(true);
   const [marker, setMarker] = useState([]);
 
   useEffect(() => {

@@ -18,7 +18,7 @@ export const ProfileContainer = styled.View`
 `;
 
 export const ProfileButton = styled(Button).attrs({
-  color: colors.brand.primary,
+  color: colors.bg.secondary,
 })`
   padding: ${(props) => props.theme.space[1]};
 `;

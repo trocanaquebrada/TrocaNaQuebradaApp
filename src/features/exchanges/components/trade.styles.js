@@ -18,7 +18,7 @@ export const TradeContainer = styled.View`
 `;
 
 export const TradeButton = styled(Button).attrs({
-  color: colors.brand.primary,
+  color: colors.bg.secondary,
 })`
   padding: ${(props) => props.theme.space[2]};
 `;
